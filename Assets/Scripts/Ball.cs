@@ -12,12 +12,12 @@ public class Ball : MonoBehaviour
     void Start()
     {
         started = false;
-        platform = FindObjectOfType<Platform>();
-        rb = GetComponent<Rigidbody2D>();
+        platform = FindObjectOfType<Platform>(); // находит геймОбжек Platform
+        rb = GetComponent<Rigidbody2D>(); // найти компонент Rigidbody2D в том же геймОбжект, где находится скрипт
     }
 
     // Update is called once per frame
-    void Update()
+    void Update()   
     {
         if (started)
         {
@@ -28,7 +28,25 @@ public class Ball : MonoBehaviour
             LockBallTOPlatform();
         }
     }
-        private void OnCollisionEnter2D(Collision2D collision)
+    private void LockBallTOPlatform()
+    {
+        // ldbufnmcz lfkmit
+        transform.position = new Vector3(platform.transform.position.x, transform.position.y, 0);
+        // мяч привязан к позиции платвормы по х
+        if (Input.GetMouseButtonDown(0)) // ели нажата ЛКМ, то запуск мяча
+        {
+            started = true;
+            LaunchBall();
+        }
+    }
+    private void LaunchBall()
+    {
+        Vector2 force = new Vector2(speed, speed);
+        rb.AddForce(force);
+    }
+
+    // Вызов событий у движка физики. 
+         private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("CollisionEnter");
     }
@@ -42,21 +60,5 @@ public class Ball : MonoBehaviour
         Debug.Log("CollisionStay");
     }
 
-
-    private void LockBallTOPlatform()
-    {
-        // ldbufnmcz lfkmit
-        transform.position = new Vector3(platform.transform.position.x, transform.position.y, 0);
-        if (Input.GetMouseButtonDown(0))
-        {
-            started = true;
-            LaunchBall();
-        }
-    }
-    private void LaunchBall()
-    {
-        Vector2 force = new Vector2(speed, speed);
-        rb.AddForce(force);
-    }
 }
 
