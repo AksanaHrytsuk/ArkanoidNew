@@ -8,6 +8,7 @@ public class Ball : MonoBehaviour
     bool started; // false
     public Platform platform;
     Rigidbody2D rb;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,9 +42,10 @@ public class Ball : MonoBehaviour
         }
     }
     private void LaunchBall()
-    {   int way = Random.Range(0,2)*2-1;
-        int rand = Random.Range(0, speed)*way;
-        Vector2 force = new Vector2(way*(speed - rand),(speed + rand));
+    {
+        int way = Random.Range(0, 2) * 2 - 1;
+        int rand = Random.Range(0, speed) * way;
+        Vector2 force = new Vector2(way * (speed - rand), (speed + rand));
         rb.AddForce(force);
     }
 

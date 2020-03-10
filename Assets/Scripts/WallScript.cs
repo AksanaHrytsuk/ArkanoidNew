@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WallScript : MonoBehaviour
 {
+    Ball ball;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,12 +14,14 @@ public class WallScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+       
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         
-        Debug.Log("CollisionEnter");
+        ball = FindObjectOfType<Ball>();
+        ball.LockBallTOPlatform(); 
+        Debug.Log("CollisionEnterWall");
     }
 
 }
