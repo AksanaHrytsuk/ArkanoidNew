@@ -22,6 +22,7 @@ public class WallScript : MonoBehaviour
         ball = FindObjectOfType<Ball>();
         Platform platform = FindObjectOfType<Platform>();
         ball.transform.position = new Vector3(platform.transform.position.x, transform.position.y + 2, 0);
+
         ball.LockBallTOPlatform(); 
         Debug.Log("CollisionEnterWall");
     }
