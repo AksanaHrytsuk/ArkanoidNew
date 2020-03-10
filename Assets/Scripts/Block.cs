@@ -7,10 +7,12 @@ public class Block : MonoBehaviour
 {
     public Sprite[] images;
     public int hitPoint;
+    public int scorePoints;
+    public Points pointsControl;
     // Start is called before the first frame update
     void Start()
     {
-
+        pointsControl = FindObjectOfType<Points>();
     }
 
     // Update is called once per frame
@@ -29,8 +31,9 @@ public class Block : MonoBehaviour
         else
         {
             Destroy(gameObject);
-            Points.countPoints++;
-            Debug.Log(Points.countPoints);
+            pointsControl.countPoints(scorePoints);
+            
+            
         }
         //Debug.Log("CollisionExit");
 

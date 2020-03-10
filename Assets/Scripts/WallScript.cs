@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class WallScript : MonoBehaviour
 {
+    int hearts;
     Ball ball;
     // Start is called before the first frame update
     void Start()
@@ -18,13 +19,19 @@ public class WallScript : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        hearts++;
         ball = FindObjectOfType<Ball>();
-        Platform platform = FindObjectOfType<Platform>();
-        ball.transform.position = new Vector3(platform.transform.position.x, transform.position.y + 2, 0);
-
-        ball.LockBallTOPlatform(); 
-        Debug.Log("CollisionEnterWall");
+        ball.StopBall(); 
+        //Debug.Log("CollisionEnterWall");
+        if (hearts >= 3)
+        {
+            RestartLevel();
+        }
     }
-
+    
+    public void RestartLevel()
+    {
+        string name = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(name);
+    }
 }

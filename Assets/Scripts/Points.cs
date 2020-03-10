@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Points : MonoBehaviour
 {
     public Text points;
-    public static int countPoints;
+    private int addPoints;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +15,13 @@ public class Points : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      points.text = "Points: " + countPoints; 
+      
+    }
+
+    public void countPoints(int score)
+    {
+
+        addPoints +=score;
+        points.text = "Points: " + addPoints;
     }
 }

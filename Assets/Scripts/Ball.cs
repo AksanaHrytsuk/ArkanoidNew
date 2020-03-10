@@ -30,6 +30,13 @@ public class Ball : MonoBehaviour
         }
 
     }
+    public void StopBall()
+    {
+        Platform platform = FindObjectOfType<Platform>();
+        transform.position = new Vector3(platform.transform.position.x, transform.position.y + 2, 0);
+        started = false;
+        rb.velocity = Vector2.zero;
+    }
     public void LockBallTOPlatform()
     {
         // ldbufnmcz lfkmit
