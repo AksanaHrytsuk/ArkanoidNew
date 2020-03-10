@@ -41,7 +41,7 @@ public class Ball : MonoBehaviour
             LaunchBall();
         }
     }
-    private void LaunchBall()
+    public void LaunchBall()
     {
         int way = Random.Range(0, 2) * 2 - 1;
         int rand = Random.Range(0, speed) * way;
