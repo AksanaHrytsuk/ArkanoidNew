@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2372075745467946584}
   - component: {fileID: 3637863468060709222}
+  - component: {fileID: 4185191604662884095}
+  - component: {fileID: 2262907557039045222}
   m_Layer: 0
   m_Name: elementWood000
   m_TagString: Untagged
@@ -81,3 +83,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &4185191604662884095
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4445741093370593887}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!114 &2262907557039045222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4445741093370593887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8548a706671f67d4c871f5744ee770e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  images:
+  - {fileID: 21300000, guid: f4d8f3314d0269c4ab70f7b780f34f08, type: 3}
+  - {fileID: 21300000, guid: 1a776119a2d47454fba17a668a504214, type: 3}
+  hitPoint: 0

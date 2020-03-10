@@ -6,7 +6,7 @@ public class Ball : MonoBehaviour
 {
     public int speed;
     bool started; // false
-    Platform platform;
+    public Platform platform;
     Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
@@ -17,7 +17,7 @@ public class Ball : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()   
+    void Update()
     {
         if (started)
         {
@@ -27,8 +27,9 @@ public class Ball : MonoBehaviour
         {
             LockBallTOPlatform();
         }
+
     }
-    private void LockBallTOPlatform()
+    public void LockBallTOPlatform()
     {
         // ldbufnmcz lfkmit
         transform.position = new Vector3(platform.transform.position.x, transform.position.y, 0);
@@ -40,13 +41,14 @@ public class Ball : MonoBehaviour
         }
     }
     private void LaunchBall()
-    {
-        Vector2 force = new Vector2(speed, speed);
+    {   int way = Random.Range(0,2)*2-1;
+        int rand = Random.Range(0, speed)*way;
+        Vector2 force = new Vector2(way*(speed - rand),(speed + rand));
         rb.AddForce(force);
     }
 
     // Вызов событий у движка физики. 
-         private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("CollisionEnter");
     }

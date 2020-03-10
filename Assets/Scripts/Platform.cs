@@ -13,8 +13,7 @@ public class Platform : MonoBehaviour
         // позиция мыши в координатах камеры
         Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(mousePos); 
         // позиция мыши в координатах игрового мира
-         
-        Camera.main.ScreenToWorldPoint(mousePos);
+        
         float mouseX = mouseWorldPos.x;
         // Debug.Log("mousePos: " + mousePos + "mousWorldPos" + mouseWorldPos);
         float clampedMouseX = Mathf.Clamp(mouseX, minX, maxX);
