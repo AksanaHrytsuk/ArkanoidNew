@@ -9,9 +9,12 @@ public class Block : MonoBehaviour
     public int hitPoint;
     public int scorePoints;
     public Points pointsControl;
+    LevelManager  LevelManager;
     // Start is called before the first frame update
     void Start()
     {
+        LevelManager = FindObjectOfType<LevelManager>();
+        LevelManager.AddBlockCount();
         pointsControl = FindObjectOfType<Points>();
     }
 
@@ -36,6 +39,10 @@ public class Block : MonoBehaviour
             
         }
         //Debug.Log("CollisionExit");
+        void DestroyBlock(){
+            Destroy(gameObject);
+            LevelManager.RemoveBlockCount();
+        }
 
     }
 }

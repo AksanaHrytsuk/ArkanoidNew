@@ -33,6 +33,6 @@ public class WallScript : MonoBehaviour
     public void RestartLevel()
     {
         string name = SceneManager.GetActiveScene().name;
-        SceneManager.LoadScene(name);
+        SceneManager.LoadScene("Win Scene");
     }
 }

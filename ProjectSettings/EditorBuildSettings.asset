@@ -16,8 +16,11 @@ EditorBuildSettings:
     guid: 3187f68799d588f41814981d6c7a1412
   - enabled: 1
     path: Assets/Scens/GameScene2.unity
-    guid: 5f4fbafdd4c5fde9787dd7d1d752e1f0
+    guid: ed49a6fc83332234d9e7ac2af925d8a1
   - enabled: 1
     path: Assets/Scens/Win Scene.unity
     guid: 2ba505283a9897a0e9971a698eba3ca8
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
