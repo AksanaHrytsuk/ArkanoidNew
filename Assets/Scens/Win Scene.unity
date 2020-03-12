@@ -207,8 +207,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd1f6704b3475d54e83b937736cfcf1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resultText: {fileID: 1570743605}
-  text: {fileID: 0}
 --- !u!1 &559310679
 GameObject:
   m_ObjectHideFlags: 0
@@ -1095,7 +1093,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Start Scene
+          m_StringArgument: Game Scene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1939732346

@@ -6,6 +6,7 @@ public class WallScript : MonoBehaviour
 {
     int hearts;
     Ball ball;
+    LoaderScens loaderScens;
     // Start is called before the first frame update
     void Start()
     {
