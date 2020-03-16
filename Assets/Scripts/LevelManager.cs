@@ -7,7 +7,6 @@ public class LevelManager : MonoBehaviour
     public int blockNumbers;
     LoaderScens loaderScens;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -20,12 +19,12 @@ public class LevelManager : MonoBehaviour
     {
         blockNumbers++;
     }
-
     public void RemoveBlockCount()
     {
         blockNumbers--;
-        if (blockNumbers <= 0)
+        if (blockNumbers == 0)
         {
+            //Debug.Log("I am here");
             loaderScens.LoadNextScene();
         }
     }

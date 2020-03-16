@@ -12,14 +12,17 @@ EditorBuildSettings:
     path: Assets/Scens/Start Scene.unity
     guid: 2c2325cda93cdc848907cb6ac700e975
   - enabled: 1
-    path: Assets/Scens/GameScene1.unity
+    path: Assets/Scens/Game Over.unity
+    guid: 2ba505283a9897a0e9971a698eba3ca8
+  - enabled: 1
+    path: Assets/Scens/Game Scene1.unity
     guid: 3187f68799d588f41814981d6c7a1412
   - enabled: 1
-    path: Assets/Scens/GameScene2.unity
+    path: Assets/Scens/Game Scene2.unity
     guid: ed49a6fc83332234d9e7ac2af925d8a1
   - enabled: 1
-    path: Assets/Scens/Win Scene.unity
-    guid: 2ba505283a9897a0e9971a698eba3ca8
+    path: Assets/Scens/Game Win.unity
+    guid: 525d70da8ae2d65239ff8c9fcd78f87c
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000

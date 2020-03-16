@@ -7,32 +7,16 @@ public class WallScript : MonoBehaviour
     int hearts;
     Ball ball;
     LoaderScens loaderScens;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        loaderScens = FindObjectOfType<LoaderScens>();
         hearts++;
         ball = FindObjectOfType<Ball>();
         ball.StopBall(); 
         //Debug.Log("CollisionEnterWall");
         if (hearts >= 3)
         {
-            RestartLevel();
+            loaderScens.LoadNextSceneByName("Game Over");
         }
-    }
-    
-    public void RestartLevel()
-    {
-        string name = SceneManager.GetActiveScene().name;
-        SceneManager.LoadScene("Win Scene");
     }
 }

@@ -9,7 +9,7 @@ public class Block : MonoBehaviour
     public int hitPoint;
     public int scorePoints;
     public Points pointsControl;
-    LevelManager  LevelManager;
+    LevelManager LevelManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,10 +19,10 @@ public class Block : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
 
-    }
+    }*/
     private void OnCollisionEnter2D(Collision2D collision)
     {
         hitPoint++;
@@ -33,16 +33,13 @@ public class Block : MonoBehaviour
         //Debug.Log(hitPoint);
         else
         {
-            Destroy(gameObject);
+            DestroyBlock();
             pointsControl.countPoints(scorePoints);
-            
-            
         }
-        //Debug.Log("CollisionExit");
-        void DestroyBlock(){
-            Destroy(gameObject);
-            LevelManager.RemoveBlockCount();
-        }
-
+    }
+    void DestroyBlock()
+    {
+        LevelManager.RemoveBlockCount();
+        Destroy(gameObject);
     }
 }

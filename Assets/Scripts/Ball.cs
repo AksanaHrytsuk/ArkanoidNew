@@ -5,7 +5,7 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     public int speed;
-    bool started; // false
+    bool started; // false по умолчанию
     public Platform platform;
     Rigidbody2D rb;
 
@@ -22,7 +22,7 @@ public class Ball : MonoBehaviour
     {
         if (started)
         {
-            // ничего неделает
+            // ничего не делает
         }
         else
         {
@@ -30,7 +30,7 @@ public class Ball : MonoBehaviour
         }
 
     }
-    public void StopBall()
+    public void StopBall() 
     {
         Platform platform = FindObjectOfType<Platform>();
         transform.position = new Vector3(platform.transform.position.x, transform.position.y + 2, 0);
@@ -39,9 +39,7 @@ public class Ball : MonoBehaviour
     }
     public void LockBallTOPlatform()
     {
-        // ldbufnmcz lfkmit
-        transform.position = new Vector3(platform.transform.position.x, transform.position.y, 0);
-        // мяч привязан к позиции платвормы по х
+        transform.position = new Vector3(platform.transform.position.x, transform.position.y, 0); // мяч привязан к позиции платформы по х
         if (Input.GetMouseButtonDown(0)) // ели нажата ЛКМ, то запуск мяча
         {
             started = true;
@@ -56,20 +54,20 @@ public class Ball : MonoBehaviour
         rb.AddForce(force);
     }
 
-    // Вызов событий у движка физики. 
+    /* Вызов событий у движка физики. 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("CollisionEnter");
     }
 
     private void OnCollisionExit(Collision collision)
-    {
+{
         Debug.Log("CollisionExit");
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
         Debug.Log("CollisionStay");
-    }
+    }*/
 
 }
 

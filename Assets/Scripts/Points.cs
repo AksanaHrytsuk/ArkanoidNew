@@ -11,23 +11,23 @@ public class Points : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-        // Debug.Log("Hi");
-        Points[] points = FindObjectsOfType<Points>();
-        if (points.Length > 1)
-        {
-            Destroy(gameObject);
-            gameObject.SetActive(false);
-        }
-
+        Points[] pointsList = FindObjectsOfType<Points>();
+        Debug.Log(pointsList.Length);
+        // if (pointsList.Length > 2)
+        // {
+        //     gameObject.SetActive(false);
+        //     Destroy(gameObject);
+        // }
     }
-    void Start()
-    {
-       // Debug.Log("Choos");
-    }
+     void Start()
+     {
+        Debug.Log("Choos");
+     }
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)){
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
             if (pauseActive)
             {
                 // turen off Pause
@@ -43,7 +43,7 @@ public class Points : MonoBehaviour
 
     public void countPoints(int score)
     {
-        addPoints +=score;
+        addPoints += score;
         points.text = "Points: " + addPoints;
         DontDestroyOnLoad(gameObject);
     }
