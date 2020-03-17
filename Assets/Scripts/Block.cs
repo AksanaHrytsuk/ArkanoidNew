@@ -10,12 +10,14 @@ public class Block : MonoBehaviour
     public int scorePoints;
     public Points pointsControl;
     LevelManager LevelManager;
+    public SpriteRenderer spriteRenderer;
     // Start is called before the first frame update
     void Start()
     {
         LevelManager = FindObjectOfType<LevelManager>();
         LevelManager.AddBlockCount();
         pointsControl = FindObjectOfType<Points>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -25,6 +27,10 @@ public class Block : MonoBehaviour
     }*/
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (spriteRenderer.enabled == false){
+            spriteRenderer.enabled = true;
+        }
+        else{
         hitPoint++;
         if (hitPoint < 3)
         {
@@ -36,6 +42,7 @@ public class Block : MonoBehaviour
             DestroyBlock();
             pointsControl.countPoints(scorePoints);
         }
+        }
     }
     void DestroyBlock()
     {
@@ -43,3 +50,4 @@ public class Block : MonoBehaviour
         Destroy(gameObject);
     }
 }
+

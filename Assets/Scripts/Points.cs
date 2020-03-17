@@ -6,39 +6,27 @@ using UnityEngine.UI;
 public class Points : MonoBehaviour
 {
     public Text points;
-    private int addPoints;
-    bool pauseActive;
+    public int addPoints;
     // Start is called before the first frame update
     private void Awake()
     {
         Points[] pointsList = FindObjectsOfType<Points>();
         Debug.Log(pointsList.Length);
-        // if (pointsList.Length > 2)
-        // {
-        //     gameObject.SetActive(false);
-        //     Destroy(gameObject);
-        // }
+        if (pointsList.Length > 1)
+        {
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
+         DontDestroyOnLoad(this.gameObject);
     }
-     void Start()
-     {
-        Debug.Log("Choos");
-     }
+    void Start()
+    {
+
+    }
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (pauseActive)
-            {
-                // turen off Pause
-                pauseActive = false;
-            }
-            else
-            {
-                Time.timeScale = 0;
-                pauseActive = true;
-            }
-        }
+       
     }
 
     public void countPoints(int score)
