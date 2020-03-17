@@ -7,6 +7,9 @@ public class Pause : MonoBehaviour
     public GameObject image;
     bool pauseActive;
     Platform stopPlatform;
+    public bool autoplay;
+    public float autoplaySpead = 1.5f;
+    public WallScript wallScripts;
 
 
     // Start is called before the first frame update
@@ -14,9 +17,14 @@ public class Pause : MonoBehaviour
     {
         // image = FindObjectsOfType<Canvas>();
         // image[0].enabled = false;
-        image = GameObject.Find("Pause/Canvas");
+       // image = GameObject.Find("Pause/Canvas");
         image.SetActive(false);
         stopPlatform = FindObjectOfType<Platform>();
+        if (autoplay)
+        {
+            Time.timeScale = autoplaySpead;
+        }
+        wallScripts = FindObjectOfType<WallScript>();
     }
 
     // Update is called once per frame
@@ -26,9 +34,17 @@ public class Pause : MonoBehaviour
         {
             if (pauseActive)
             {
+                if (autoplay)
+                {
+                    Time.timeScale = autoplaySpead;
+                }
+                else
+                {
+                    Time.timeScale = 1;
+                }
                 image.SetActive(false);
                 // turn off Pause
-                Time.timeScale = 1;
+                stopPlatform.enabled = true;
                 pauseActive = false;
             }
             else

@@ -7,6 +7,11 @@ public class Points : MonoBehaviour
 {
     public Text points;
     public int addPoints;
+    public WallScript wallScripts;
+    int hearts;
+    Ball ball;
+    public int maxHearts;
+    LoaderScens loaderScens;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -21,14 +26,25 @@ public class Points : MonoBehaviour
     }
     void Start()
     {
-
+      
     }
     // Update is called once per frame
     void Update()
     {
        
     }
-
+    public void ballDown()
+    {
+        loaderScens = FindObjectOfType<LoaderScens>();
+        hearts++;
+        ball = FindObjectOfType<Ball>();
+        ball.StopBall();
+        //Debug.Log("CollisionEnterWall");
+        if (hearts >= maxHearts)
+        {
+            loaderScens.LoadNextSceneByName("Game Over");
+        }
+    }
     public void countPoints(int score)
     {
         addPoints += score;

@@ -9,17 +9,17 @@ public class Result : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         Points arkanoid = FindObjectOfType<Points>();
         Debug.Log(arkanoid);
         int number = arkanoid.addPoints;
         text.text = "Game Over, boy!\n Points: " + number;
         Destroy(arkanoid.gameObject); //destroy gameobjec
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }
 

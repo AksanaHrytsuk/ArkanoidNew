@@ -4,19 +4,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class WallScript : MonoBehaviour
 {
-    int hearts;
-    Ball ball;
-    LoaderScens loaderScens;
+   public Points points;
+  
+        private void Start()
+    {
+        points = FindObjectOfType<Points>();
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        loaderScens = FindObjectOfType<LoaderScens>();
-        hearts++;
-        ball = FindObjectOfType<Ball>();
-        ball.StopBall(); 
-        //Debug.Log("CollisionEnterWall");
-        if (hearts >= 3)
-        {
-            loaderScens.LoadNextSceneByName("Game Over");
-        }
+        points.ballDown();
     }
 }

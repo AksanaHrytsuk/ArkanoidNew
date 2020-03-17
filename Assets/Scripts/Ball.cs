@@ -8,6 +8,11 @@ public class Ball : MonoBehaviour
     bool started; // false по умолчанию
     public Platform platform;
     Rigidbody2D rb;
+   
+    public bool IsStarted()
+    {
+        return started;
+    }
 
     // Start is called before the first frame update
     void Start()
