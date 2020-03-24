@@ -127,3 +127,6 @@ MonoBehaviour:
   hitPoint: 0
   scorePoints: 1
   pointsControl: {fileID: 0}
+  spriteRenderer: {fileID: 0}
+  InvisibleSprite: 0
+  pickup: {fileID: 8940284754966455408, guid: fc386e9368ada41cd8fd937ae99e8ad1, type: 3}

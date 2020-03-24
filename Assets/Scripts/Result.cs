@@ -10,7 +10,7 @@ public class Result : MonoBehaviour
     void Start()
     {
         Points arkanoid = FindObjectOfType<Points>();
-        Debug.Log(arkanoid);
+        //Debug.Log(arkanoid);
         int number = arkanoid.addPoints;
         text.text = "Game Over, boy!\n Points: " + number;
         Destroy(arkanoid.gameObject); //destroy gameobjec

@@ -24,15 +24,6 @@ public class Points : MonoBehaviour
         }
          DontDestroyOnLoad(this.gameObject);
     }
-    void Start()
-    {
-      
-    }
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
     public void ballDown()
     {
         loaderScens = FindObjectOfType<LoaderScens>();
@@ -51,4 +42,14 @@ public class Points : MonoBehaviour
         points.text = "Points: " + addPoints;
         DontDestroyOnLoad(gameObject);
     }
+
+    public void pointsIncrement(){
+        addPoints += 100;
+        points.text = "Points: " + addPoints;
+    }
+      public void pointsDecrement(){
+        addPoints -= 200;
+        points.text = "Points: " + addPoints;
+    }
+
 }

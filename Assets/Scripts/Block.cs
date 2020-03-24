@@ -11,7 +11,8 @@ public class Block : MonoBehaviour
     public Points pointsControl;
     LevelManager LevelManager;
     public SpriteRenderer spriteRenderer;
-    public bool spriteRend;
+    public bool InvisibleSprite;
+    public GameObject pickup;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,7 @@ public class Block : MonoBehaviour
         LevelManager.AddBlockCount();
         pointsControl = FindObjectOfType<Points>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        if (spriteRend == true)
+        if (InvisibleSprite == true)
         {
             spriteRenderer.enabled = false;
         }
@@ -55,6 +56,13 @@ public class Block : MonoBehaviour
     {
         LevelManager.RemoveBlockCount();
         Destroy(gameObject);
+        if (pickup != null)
+        {
+        Vector3 pickupPosition = transform.position;
+        //Instantiate(pickup, ModifySpeed, Quaternion.identity);
+        GameObject newObject = Instantiate(pickup);
+        newObject.transform.position = pickupPosition;
+        }
     }
 }
 

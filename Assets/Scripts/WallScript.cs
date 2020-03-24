@@ -12,6 +12,7 @@ public class WallScript : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log(collision.gameObject.name);
         points.ballDown();
     }
 }

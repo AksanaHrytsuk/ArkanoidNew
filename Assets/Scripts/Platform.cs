@@ -16,13 +16,13 @@ public class Platform : MonoBehaviour
     }
     void Update()
     {
-       if (pointsCo.autoplay)
+        if (pointsCo.autoplay && ball.IsStarted())
         {
-            MoveWithBal();
+            MoveWithBall();
         }
         else
         {
-           MoveWithMouse();
+            MoveWithMouse();
         }
 
     }
@@ -39,7 +39,7 @@ public class Platform : MonoBehaviour
         float platformY = transform.position.y;
         transform.position = new Vector3(clampedMouseX, platformY, 0);
     }
-    void MoveWithBal()
+    void MoveWithBall()
     {
         transform.position = new Vector3(ball.transform.position.x, transform.position.y, 0);
     }

@@ -24,7 +24,6 @@ public class LevelManager : MonoBehaviour
         blockNumbers--;
         if (blockNumbers == 0)
         {
-            //Debug.Log("I am here");
             loaderScens.LoadNextScene();
         }
     }

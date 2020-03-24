@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    public int speed;
+    public float speed;
     bool started; // false по умолчанию
     public Platform platform;
     Rigidbody2D rb;
-   
+
     public bool IsStarted()
     {
         return started;
     }
-
+    public void ModifySpeed(float modificator)
+    {
+        rb.velocity = rb.velocity * modificator;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +38,7 @@ public class Ball : MonoBehaviour
         }
 
     }
-    public void StopBall() 
+    public void StopBall()
     {
         Platform platform = FindObjectOfType<Platform>();
         transform.position = new Vector3(platform.transform.position.x, transform.position.y + 2, 0);
@@ -54,9 +57,19 @@ public class Ball : MonoBehaviour
     public void LaunchBall()
     {
         int way = Random.Range(0, 2) * 2 - 1;
-        int rand = Random.Range(0, speed) * way;
+        float rand = Random.Range(0, speed) * way;
         Vector2 force = new Vector2(way * (speed - rand), (speed + rand));
         rb.AddForce(force);
+
+    }
+    void OnDrawGizmos()
+    {
+        if (rb != null)
+        {
+            Gizmos.color = Color.yellow;
+            //Vector3 to = (Vector2)transform.position + rb.
+            Gizmos.DrawLine(transform.position, transform.position + (Vector3)rb.velocity);
+        }
     }
 
     /* Вызов событий у движка физики. 
