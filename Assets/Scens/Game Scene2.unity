@@ -466,7 +466,7 @@ PrefabInstance:
     - target: {fileID: 7449640326227025060, guid: ae39405547aa85b0ea76747d341c57e2,
         type: 3}
       propertyPath: autoplay
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae39405547aa85b0ea76747d341c57e2, type: 3}
@@ -534,6 +534,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 961346566}
     m_Modifications:
+    - target: {fileID: 2262907557039045222, guid: 8d2942663c6ae2119aa73bdfefe1e4cf,
+        type: 3}
+      propertyPath: pickup
+      value: 
+      objectReference: {fileID: 872451533855440258, guid: 4eda4b930403694b786b1594b908fc4e,
+        type: 3}
     - target: {fileID: 2372075745467946584, guid: 8d2942663c6ae2119aa73bdfefe1e4cf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1110,10 +1116,15 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 1a776119a2d47454fba17a668a504214, type: 3}
   hitPoint: 0
   scorePoints: 0
-  pointsControl: {fileID: 0}
-  spriteRenderer: {fileID: 0}
   InvisibleSprite: 0
-  pickup: {fileID: 0}
+  pickupSpeed: {fileID: 0}
+  pickupUpPoints: {fileID: 0}
+  pickupDownPoints: {fileID: 0}
+  pickupStickBall: {fileID: 0}
+  pickupDubleBall: {fileID: 0}
+  pickupScaleBall: {fileID: 0}
+  pickupScalePlatform: {fileID: 0}
+  probability: 0
 --- !u!4 &906117835 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1003984631744903648, guid: 832ec568f68246341a69fa7a0c2ca3db,
@@ -1237,6 +1248,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1003984631744903654, guid: 832ec568f68246341a69fa7a0c2ca3db,
+        type: 3}
+      propertyPath: pickup
+      value: 
+      objectReference: {fileID: 7652866533153174522, guid: 2c9764816446272f794925daf3afcc1d,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 832ec568f68246341a69fa7a0c2ca3db, type: 3}
 --- !u!1001 &1195139680
@@ -1588,7 +1605,7 @@ GameObject:
   - component: {fileID: 1663931552}
   m_Layer: 0
   m_Name: Ball
-  m_TagString: Untagged
+  m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1811,7 +1828,7 @@ PrefabInstance:
         type: 3}
       propertyPath: pickup
       value: 
-      objectReference: {fileID: 8940284754966455408, guid: fc386e9368ada41cd8fd937ae99e8ad1,
+      objectReference: {fileID: 872451533855440258, guid: 4eda4b930403694b786b1594b908fc4e,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7517eac7c0abdfa31814787fc4c5547c, type: 3}
@@ -1919,7 +1936,7 @@ GameObject:
   - component: {fileID: 1987874152}
   m_Layer: 0
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2233,6 +2250,24 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 961346566}
     m_Modifications:
+    - target: {fileID: -1896013889798552939, guid: 2e3e251fc22a255c48d31fdd54693420,
+        type: 3}
+      propertyPath: pickupSpeed
+      value: 
+      objectReference: {fileID: 8940284754966455408, guid: fc386e9368ada41cd8fd937ae99e8ad1,
+        type: 3}
+    - target: {fileID: -1896013889798552939, guid: 2e3e251fc22a255c48d31fdd54693420,
+        type: 3}
+      propertyPath: pickupUpPoints
+      value: 
+      objectReference: {fileID: 872451533855440258, guid: 4eda4b930403694b786b1594b908fc4e,
+        type: 3}
+    - target: {fileID: -1896013889798552939, guid: 2e3e251fc22a255c48d31fdd54693420,
+        type: 3}
+      propertyPath: pickupDownPoints
+      value: 
+      objectReference: {fileID: 7652866533153174522, guid: 2c9764816446272f794925daf3afcc1d,
+        type: 3}
     - target: {fileID: 6106299979458416141, guid: 2e3e251fc22a255c48d31fdd54693420,
         type: 3}
       propertyPath: m_Name

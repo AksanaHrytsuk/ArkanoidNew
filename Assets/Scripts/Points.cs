@@ -7,7 +7,7 @@ public class Points : MonoBehaviour
 {
     public Text points;
     public int addPoints;
-    public WallScript wallScripts;
+    WallDownScript wallDownScripts;
     int hearts;
     Ball ball;
     public int maxHearts;
@@ -42,14 +42,4 @@ public class Points : MonoBehaviour
         points.text = "Points: " + addPoints;
         DontDestroyOnLoad(gameObject);
     }
-
-    public void pointsIncrement(){
-        addPoints += 100;
-        points.text = "Points: " + addPoints;
-    }
-      public void pointsDecrement(){
-        addPoints -= 200;
-        points.text = "Points: " + addPoints;
-    }
-
 }

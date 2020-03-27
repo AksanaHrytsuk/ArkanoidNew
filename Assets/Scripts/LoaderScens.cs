@@ -25,5 +25,6 @@ public class LoaderScens : MonoBehaviour
         string name = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(name);
     }
+    //public void LoadeLevel()
 }
 

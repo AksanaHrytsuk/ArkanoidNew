@@ -9,7 +9,7 @@ public class Pause : MonoBehaviour
     Platform stopPlatform;
     public bool autoplay;
     public float autoplaySpead = 1.5f;
-    public WallScript wallScripts;
+    public WallDownScript wallDownScripts;
 
 
     // Start is called before the first frame update
@@ -24,7 +24,7 @@ public class Pause : MonoBehaviour
         {
             Time.timeScale = autoplaySpead;
         }
-        wallScripts = FindObjectOfType<WallScript>();
+        wallDownScripts = FindObjectOfType<WallDownScript>();
     }
 
     // Update is called once per frame
