@@ -5,9 +5,9 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     public float speed;
-    bool started; // false по умолчанию
+    bool started = false; // false по умолчанию
     bool sticky;
-    public Platform platform;
+    Platform platform;
     Rigidbody2D rb;
     Vector3 ballOffset;
 
@@ -21,7 +21,7 @@ public class Ball : MonoBehaviour
     }
     public void ModifiScaleBall(float scale)
     {
- 
+
     }
     public void ModifiScalePlatform()
     {
@@ -33,32 +33,26 @@ public class Ball : MonoBehaviour
         sticky = true;
     }
     //public void Duplicate(
-        //Ball newBall = Instantiate(this);
-        //newBall = this; 
+    //Ball newBall = Instantiate(this);
+    //newBall = this; 
     //)
     // Start is called before the first frame update
     void Start()
     {
-        
-        Debug.Log(ballOffset);
         started = false;
         platform = FindObjectOfType<Platform>(); // находит геймОбжек Platform
         rb = GetComponent<Rigidbody2D>(); // найти компонент Rigidbody2D в том же геймОбжект, где находится скрипт
-        ballOffset = transform.position - platform.transform.position;
+        ballOffset = transform.position - platform.transform.position; //вектор между платформой и мячом
+        Debug.Log(ballOffset);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (started)
-        {
-            // ничего не делает
-        }
-        else
+        if (!started)
         {
             LockBallTOPlatform();
         }
-
     }
     public void StopBall()
     {
@@ -69,16 +63,16 @@ public class Ball : MonoBehaviour
     }
     public void LockBallTOPlatform()
     {
-       // transform.position = new Vector3(platform.transform.position.x, transform.position.y, 0); // мяч привязан к позиции платформы по х
-        transform.position = platform.transform.position + ballOffset; 
+        // transform.position = new Vector3(platform.transform.position.x, transform.position.y, 0); // мяч привязан к позиции платформы по х
+       // transform.position = platform.transform.position + ballOffset;
         if (Input.GetMouseButtonDown(0)) // ели нажата ЛКМ, то запуск мяча
         {
-            started = true;
             LaunchBall();
         }
     }
     public void LaunchBall()
     {
+        started = true;
         int way = Random.Range(0, 2) * 2 - 1;
         float rand = Random.Range(0, speed) * way;
         Vector2 force = new Vector2(way * (speed - rand), (speed + rand));
@@ -96,8 +90,10 @@ public class Ball : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Platform"){
-            if (sticky){
+        if (collision.gameObject.tag == "Platform")
+        {
+            if (sticky)
+            {
                 started = false;
                 rb.velocity = Vector2.zero; // y==0 and x==0 
                 ballOffset = transform.position - platform.transform.position; //вектор между платвормой и мячом

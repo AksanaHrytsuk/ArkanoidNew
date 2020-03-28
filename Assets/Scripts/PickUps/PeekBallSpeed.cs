@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PeekBallSpeed : MonoBehaviour
 {
-    public float speedKoeff = 1.25f;
+    public float speedKoeff;
     void ApplyEffect()
     {
         Debug.Log("Change ball speed");
@@ -20,11 +20,11 @@ public class PeekBallSpeed : MonoBehaviour
             ApplyEffect();
             Destroy(gameObject);
         }
-        else if (collision.gameObject.tag == "LoseGame")
+        /* else if (collision.gameObject.tag == "LoseGame")
         {
             Destroy(gameObject);
             Debug.Log("PickUp is crashed");
-        }
+        } */
     }
     //dosmt
 }
