@@ -11,7 +11,9 @@ public class Points : MonoBehaviour
     int hearts;
     Ball ball;
     public int maxHearts;
+
     LoaderScens loaderScens;
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -22,8 +24,10 @@ public class Points : MonoBehaviour
             gameObject.SetActive(false);
             Destroy(gameObject);
         }
-         DontDestroyOnLoad(this.gameObject);
+
+        DontDestroyOnLoad(this.gameObject);
     }
+
     public void ballDown()
     {
         loaderScens = FindObjectOfType<LoaderScens>();
@@ -36,6 +40,7 @@ public class Points : MonoBehaviour
             loaderScens.LoadNextSceneByName("Game Over");
         }
     }
+
     public void countPoints(int score)
     {
         addPoints += score;

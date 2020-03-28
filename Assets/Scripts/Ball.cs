@@ -15,6 +15,10 @@ public class Ball : MonoBehaviour
     {
         return started;
     }
+    public void MadeSticky()
+    {
+        sticky = true;
+    }
     public void ModifySpeed(float modificator)
     {
         rb.velocity = rb.velocity * modificator;
@@ -26,11 +30,6 @@ public class Ball : MonoBehaviour
     public void ModifiScalePlatform()
     {
 
-    }
-
-    public void MadeSticky()
-    {
-        sticky = true;
     }
     //public void Duplicate(
     //Ball newBall = Instantiate(this);
@@ -51,20 +50,20 @@ public class Ball : MonoBehaviour
     {
         if (!started)
         {
-            LockBallTOPlatform();
+            LockBallToPlatform();
         }
     }
     public void StopBall()
     {
-        Platform platform = FindObjectOfType<Platform>();
+        platform = FindObjectOfType<Platform>();
         transform.position = new Vector3(platform.transform.position.x, transform.position.y + 2, 0);
         started = false;
         rb.velocity = Vector2.zero;
     }
-    public void LockBallTOPlatform()
-    {
+    public void LockBallToPlatform()
+    {   
         // transform.position = new Vector3(platform.transform.position.x, transform.position.y, 0); // мяч привязан к позиции платформы по х
-       // transform.position = platform.transform.position + ballOffset;
+        transform.position = platform.transform.position + ballOffset;
         if (Input.GetMouseButtonDown(0)) // ели нажата ЛКМ, то запуск мяча
         {
             LaunchBall();

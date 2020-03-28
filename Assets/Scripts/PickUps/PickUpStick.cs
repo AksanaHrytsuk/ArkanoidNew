@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PickUpStick : MonoBehaviour
 {
-   public float speedKoeff;
     void ApplyEffect()
     {
         Ball ball = FindObjectOfType<Ball>();
