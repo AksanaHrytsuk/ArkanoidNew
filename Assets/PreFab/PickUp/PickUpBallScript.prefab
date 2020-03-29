@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8940284754966455413}
   - component: {fileID: 8940284754966455410}
   - component: {fileID: 8940284754966455411}
-  - component: {fileID: 8940284754966455415}
+  - component: {fileID: 9140504401497396818}
   m_Layer: 0
   m_Name: PickUpBallScript
   m_TagString: Untagged
@@ -73,8 +73,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ee120530849d89546b2ab4db97ae4d75, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 9d505b421bfc40b449cc559d2a5926cc, type: 3}
+  m_Color: {r: 1, g: 0, b: 0.8503313, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -121,7 +121,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &8940284754966455415
+--- !u!114 &9140504401497396818
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,7 +130,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 8940284754966455408}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b9a3856c2b1404d08200937a09d59b2, type: 3}
+  m_Script: {fileID: 11500000, guid: 03e9b82ff04e331f09ad8cffe311b83a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedKoeff: 1.25

@@ -1,29 +1,28 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class PickUpMultipleBall : MonoBehaviour
+namespace PickUps
 {
-   /*  public int ballsNumber = 2;
-    void ApplyEffect()
+    public class PickUpMultipleBall : MonoBehaviour
     {
-        Ball [] ball = FindObjectOfType<Ball>();
-        for (int i = 0; i < ballsNumber; i++){
-            //Instantiate(ball);
-            ball.MakeSticky();
-
-        }
-        
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Debug.Log("Pickup trigger! " + collision.gameObject.name);
-        if (collision.gameObject.tag == "Platform")
+        public int ballsNumber = 2;
+        void ApplyEffect()
         {
-            Debug.Log("g");
-            ApplyEffect();
-            Destroy(gameObject);
+            Ball[] ball = FindObjectsOfType<Ball>();
+            for (int i = 0; i < ball.Length; i++)
+            {
+                ball[i].Duplicate();
+            }
+        
         }
-    } */
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            Debug.Log("Pickup trigger! " + collision.gameObject.name);
+            if (collision.gameObject.CompareTag("Platform"))
+            {
+                ApplyEffect();
+                Destroy(gameObject);
+            }
+        } 
     
+    }
 }

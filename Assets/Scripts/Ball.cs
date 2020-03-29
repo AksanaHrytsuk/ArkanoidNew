@@ -19,6 +19,12 @@ public class Ball : MonoBehaviour
     {
         sticky = true;
     }
+    private void Awake()
+    {
+        started = false;
+
+        rb = GetComponent<Rigidbody2D>(); //Найти компонент Rigidbody2D на том же гейм обжекте
+    }
     public void ModifySpeed(float modificator)
     {
         rb.velocity = rb.velocity * modificator;
@@ -31,10 +37,15 @@ public class Ball : MonoBehaviour
     {
 
     }
-    //public void Duplicate(
-    //Ball newBall = Instantiate(this);
-    //newBall = this; 
-    //)
+    public void Duplicate()
+    {
+        Ball newBall = Instantiate(this); 
+        newBall.LaunchBall();
+        if (newBall == sticky)
+        {
+            MadeSticky();
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -56,11 +67,12 @@ public class Ball : MonoBehaviour
     public void StopBall()
     {
         platform = FindObjectOfType<Platform>();
-        transform.position = new Vector3(platform.transform.position.x, transform.position.y + 2, 0);
+        transform.position = new Vector3(platform.transform.position.x, transform.position.y, 0);
         started = false;
         rb.velocity = Vector2.zero;
     }
-    public void LockBallToPlatform()
+
+    private void LockBallToPlatform()
     {   
         // transform.position = new Vector3(platform.transform.position.x, transform.position.y, 0); // мяч привязан к позиции платформы по х
         transform.position = platform.transform.position + ballOffset;
@@ -69,6 +81,7 @@ public class Ball : MonoBehaviour
             LaunchBall();
         }
     }
+
     public void LaunchBall()
     {
         started = true;
@@ -76,7 +89,6 @@ public class Ball : MonoBehaviour
         float rand = Random.Range(0, speed) * way;
         Vector2 force = new Vector2(way * (speed - rand), (speed + rand));
         rb.AddForce(force);
-
     }
     void OnDrawGizmos()
     {
@@ -89,12 +101,11 @@ public class Ball : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Platform")
+        if (collision.gameObject.CompareTag("Platform"))
         {
             if (sticky)
             {
-                started = false;
-                rb.velocity = Vector2.zero; // y==0 and x==0 
+                StopBall();
                 ballOffset = transform.position - platform.transform.position; //вектор между платвормой и мячом
             }
         }

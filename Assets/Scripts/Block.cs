@@ -18,10 +18,10 @@ public class Block : MonoBehaviour
     public GameObject pickupSpeed;
     public GameObject pickupUpPoints;
     public GameObject pickupDownPoints;
-    //public GameObject pickupStickBall;
-    //public GameObject pickupDubleBall;
+    public GameObject pickupStickBall;
+    public GameObject pickupDoubleBall;
     //public GameObject pickupScaleBall;
-   // public GameObject pickupScalePlatform;
+   //public GameObject pickupScalePlatform;
     public int probability;
     // Start is called before the first frame update
     void Start()
@@ -69,8 +69,8 @@ public class Block : MonoBehaviour
         CreatePickUp(pickupSpeed);
         CreatePickUp(pickupUpPoints);
         CreatePickUp(pickupDownPoints);
-        //CreatePickUp(pickupStickBall);
-       // CreatePickUp(pickupDubleBall);
+        CreatePickUp(pickupStickBall);
+        CreatePickUp(pickupDoubleBall);
         //CreatePickUp(pickupScaleBall);
         //CreatePickUp(pickupScalePlatform);
         if (isExploding)
@@ -109,7 +109,6 @@ public class Block : MonoBehaviour
                 //Instantiate(pickup, ModifySpeed, Quaternion.identity);
                 if (Chance())
                 {
-
                     GameObject newObject = Instantiate(pick);
                     newObject.transform.position = pickupPosition;
                 }
@@ -131,10 +130,8 @@ public class Block : MonoBehaviour
     }
     void OnDrawGizmos()
     {
-        
      Gizmos.color = Color.white;
      Gizmos.DrawWireSphere(transform.position, explodeRadius);
-            
     }
 }
 

@@ -1,24 +1,26 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class PickUpStick : MonoBehaviour
+namespace PickUps
 {
-    void ApplyEffect()
+    public class PickUpStick : MonoBehaviour
     {
-        Ball ball = FindObjectOfType<Ball>();
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Debug.Log("Pickup trigger! " + collision.gameObject.name);
-        if (collision.gameObject.tag == "Platform")
+        void ApplyEffect()
         {
-            Debug.Log("much faster");
-            ApplyEffect();
-            Destroy(gameObject);
+            Ball ball = FindObjectOfType<Ball>();
+            ball.MadeSticky();
         }
-    else if (collision.gameObject.tag == "LoseGame"){
-        //
-    }
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            Debug.Log("Pickup trigger! " + collision.gameObject.name);
+            if (collision.gameObject.CompareTag("Platform"))
+            {
+                Debug.Log("much faster");
+                ApplyEffect();
+                Destroy(gameObject);
+            }
+            else if (collision.gameObject.CompareTag("LoseGame")){
+                //
+            }
+        }
     }
 }

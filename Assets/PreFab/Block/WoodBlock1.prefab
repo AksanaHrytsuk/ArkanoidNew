@@ -121,6 +121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8548a706671f67d4c871f5744ee770e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isExploding: 0
+  explodeRadius: 0
   images:
   - {fileID: 21300000, guid: 929c30e4b758ab8439eb64fd5a190f49, type: 3}
   - {fileID: 21300000, guid: 6da5e76fc797fd446aad9a04c851a72f, type: 3}
@@ -133,6 +135,8 @@ MonoBehaviour:
     type: 3}
   pickupDownPoints: {fileID: 7652866533153174522, guid: 2c9764816446272f794925daf3afcc1d,
     type: 3}
-  pickupStickBall: {fileID: 0}
-  pickupDubleBall: {fileID: 0}
+  pickupStickBall: {fileID: 8940284754966455408, guid: fc386e9368ada41cd8fd937ae99e8ad1,
+    type: 3}
+  pickupDoubleBall: {fileID: 8940284754966455408, guid: 028598a8503d1f4d7bf68f36f29c308a,
+    type: 3}
   probability: 80

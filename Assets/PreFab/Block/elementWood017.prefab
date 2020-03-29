@@ -135,8 +135,8 @@ MonoBehaviour:
     type: 3}
   pickupDownPoints: {fileID: 7652866533153174522, guid: 2c9764816446272f794925daf3afcc1d,
     type: 3}
-  pickupStickBall: {fileID: 0}
-  pickupDubleBall: {fileID: 0}
-  pickupScaleBall: {fileID: 0}
-  pickupScalePlatform: {fileID: 0}
+  pickupStickBall: {fileID: 8940284754966455408, guid: fc386e9368ada41cd8fd937ae99e8ad1,
+    type: 3}
+  pickupDoubleBall: {fileID: 8940284754966455408, guid: 028598a8503d1f4d7bf68f36f29c308a,
+    type: 3}
   probability: 100

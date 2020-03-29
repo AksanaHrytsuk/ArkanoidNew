@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/.cache/JetBrains/Rider2020.1/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/.cache/JetBrains/Rider2020.1/resharper-host/local/Transient/ReSharperHost/v201/SolutionCaches/_ArkanoidNew.-132564577.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="ArkanoidNew.sln" t="IncludeFlat" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="Ball.cs" t="Include" />
+          <e p="Block.cs" t="Include" />
+          <e p="LevelManager.cs" t="Include" />
+          <e p="LoaderScens.cs" t="Include" />
+          <e p="Pause.cs" t="Include" />
+          <e p="PickUps" t="Include">
+            <e p="PeekBallSpeed.cs" t="Include" />
+            <e p="PickUpBallPoints.cs" t="Include" />
+            <e p="PickUpMultipleBall.cs" t="Include" />
+            <e p="PickUpScaleBall.cs" t="Include" />
+            <e p="PickUpStick.cs" t="Include" />
+          </e>
+          <e p="Platform.cs" t="Include" />
+          <e p="Points.cs" t="Include" />
+          <e p="Result.cs" t="Include" />
+          <e p="WallDownScript.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Temp/bin" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
