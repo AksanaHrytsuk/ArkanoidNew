@@ -7,6 +7,8 @@ namespace PickUps
         public float changeScale;
 
         private Platform _platform;
+
+        private Ball _ball;
         // Start is called before the first frame update
 
         private void OnTriggerEnter2D(Collider2D collision)

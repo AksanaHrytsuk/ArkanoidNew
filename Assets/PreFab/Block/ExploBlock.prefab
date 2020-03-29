@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1003984631744903649}
   - component: {fileID: 1003984631744903655}
   - component: {fileID: 1003984631744903654}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ExploBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ddfabfd84c490144e87cf86e1a6ba56e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.4506451, b: 0.14150941, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -143,7 +143,6 @@ MonoBehaviour:
     type: 3}
   pickupReduceScaleBall: {fileID: 8940284754966455408, guid: 996801ca7c5a0f1278765216c80640a5,
     type: 3}
-  pickupReduceScalePlatform: {fileID: 8940284754966455408, guid: d6b77b5e9134043c7b3a5e347ba3da49,
+  pickupIncreaseScalePlatform: {fileID: 8940284754966455408, guid: 1edf6b8ecd63b492487949b710d963d2,
     type: 3}
-  pickupIncreaseScalePlatform: {fileID: 0}
   probability: 80

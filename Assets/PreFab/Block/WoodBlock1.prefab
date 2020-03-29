@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1003984631744903649}
   - component: {fileID: 1003984631744903655}
   - component: {fileID: 1003984631744903654}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WoodBlock1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,8 +72,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 89492bf98fbe3bb4eb4fce76bcc4fa9e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 213fc5b14aca0084d96f415f7bb75953, type: 3}
+  m_Color: {r: 0.90532357, g: 1, b: 0.46274507, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -124,8 +124,8 @@ MonoBehaviour:
   isExploding: 0
   explodeRadius: 0
   images:
-  - {fileID: 21300000, guid: 929c30e4b758ab8439eb64fd5a190f49, type: 3}
-  - {fileID: 21300000, guid: 6da5e76fc797fd446aad9a04c851a72f, type: 3}
+  - {fileID: 21300000, guid: f6fe56be7b4a9344ba264494626f0720, type: 3}
+  - {fileID: 21300000, guid: 2a6749515291b414482baa7517bc5ebb, type: 3}
   hitPoint: 0
   scorePoints: 1
   InvisibleSprite: 0
@@ -142,8 +142,6 @@ MonoBehaviour:
   pickupIncreaseScaleBall: {fileID: 8940284754966455408, guid: 26ef96c43099a8da0aaa60e8efb70b13,
     type: 3}
   pickupReduceScaleBall: {fileID: 8940284754966455408, guid: 996801ca7c5a0f1278765216c80640a5,
-    type: 3}
-  pickupReduceScalePlatform: {fileID: 8940284754966455408, guid: d6b77b5e9134043c7b3a5e347ba3da49,
     type: 3}
   pickupIncreaseScalePlatform: {fileID: 8940284754966455408, guid: 1edf6b8ecd63b492487949b710d963d2,
     type: 3}

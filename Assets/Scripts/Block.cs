@@ -42,11 +42,7 @@ public class Block : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    /*void Update()
-    {
-
-    }*/
+ 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (spriteRenderer.enabled == false)
@@ -76,25 +72,29 @@ public class Block : MonoBehaviour
         // CreatePickUp(pickupUpPoints);
         // CreatePickUp(pickupDownPoints);
         // CreatePickUp(pickupStickBall);
-        // CreatePickUp(pickupDoubleBall);
-        //CreatePickUp(pickupIncreaseScaleBall);
+        CreatePickUp(pickupDoubleBall);
+        CreatePickUp(pickupIncreaseScaleBall);
         //CreatePickUp(pickupReduceScaleBall);
         //CreatePickUp(pickupReduceScalePlatform);
-        CreatePickUp(pickupIncreaseScalePlatform);
+        //CreatePickUp(pickupIncreaseScalePlatform);
         if (isExploding)
         {
-           // LayerMask layerMask = layerMask.GetMask("Block");
-
             //explode
-            Collider2D[] objectsInRadius = Physics2D.OverlapCircleAll(transform.position, explodeRadius);
 
-            // for (int i = 0; i < objectsInRadius.Length; i++)
-            //{
-            //Collider2D objectI = objectsInRadius[i];
+            //layer mask to filter physics objects
+            LayerMask layerMask = LayerMask.GetMask($"Block");
 
-            // }
+            //find objects in radius
+            Collider2D[] objectsInRadius = Physics2D.OverlapCircleAll(transform.position, explodeRadius, layerMask);
+
+           
             foreach (Collider2D objectI in objectsInRadius)
             {
+                if (objectI.gameObject == gameObject)
+                {
+                    continue; //the same gameObject ==> next iteration
+                }
+
                 Block block = objectI.gameObject.GetComponent<Block>();
                 if (block == null)
                 {
@@ -104,8 +104,6 @@ public class Block : MonoBehaviour
                 {
                     block.DestroyBlock();
                 }
-                Debug.Log(objectI.gameObject.name);
-                Destroy(objectI.gameObject);
             }
         }
         void CreatePickUp(GameObject pick)

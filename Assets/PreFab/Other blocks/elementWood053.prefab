@@ -73,8 +73,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0376d1a8f2948a547b58012a8d2b2cd4, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 4f82b4fa9fbb398499b8f5be0e0d8999, type: 3}
+  m_Color: {r: 0.9583328, g: 0.4245283, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -125,8 +125,8 @@ MonoBehaviour:
   isExploding: 0
   explodeRadius: 0
   images:
-  - {fileID: 21300000, guid: 70037955aeb830b4ca92bedccddbd555, type: 3}
-  - {fileID: 21300000, guid: 1e5d9a6ceeb495846bef9041d119af1b, type: 3}
+  - {fileID: 21300000, guid: cb7f9d4533c36ea43ab2d40657825575, type: 3}
+  - {fileID: 21300000, guid: de992d4df246bb2468a9481c267e3c9d, type: 3}
   hitPoint: 0
   scorePoints: 8
   InvisibleSprite: 0
@@ -143,8 +143,6 @@ MonoBehaviour:
   pickupIncreaseScaleBall: {fileID: 8940284754966455408, guid: 26ef96c43099a8da0aaa60e8efb70b13,
     type: 3}
   pickupReduceScaleBall: {fileID: 8940284754966455408, guid: 996801ca7c5a0f1278765216c80640a5,
-    type: 3}
-  pickupReduceScalePlatform: {fileID: 8940284754966455408, guid: d6b77b5e9134043c7b3a5e347ba3da49,
     type: 3}
   pickupIncreaseScalePlatform: {fileID: 8940284754966455408, guid: 1edf6b8ecd63b492487949b710d963d2,
     type: 3}
