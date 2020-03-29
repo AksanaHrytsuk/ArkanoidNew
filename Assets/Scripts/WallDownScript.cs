@@ -4,22 +4,28 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class WallDownScript : MonoBehaviour
 {
-    public Points points;
+    Points points;
     private void Start()
     {
         points = FindObjectOfType<Points>();
     }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Ball")
+        if (collision.gameObject.CompareTag("Ball"))
         {
+            if (FindObjectsOfType<Ball>().Length == 1)
+            {
+                points.ballDown();
+            }
+            else
+            {
+                Destroy(collision.gameObject);
+            }
             //Debug.Log(collision.gameObject.name);
-            points.ballDown();
         }
-       else 
-       {
-           Destroy(collision.gameObject);
-       }
+        else 
+        {
+            Destroy(collision.gameObject);
+        }
     }
 }

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Platform : MonoBehaviour
 {
@@ -8,6 +6,10 @@ public class Platform : MonoBehaviour
     Ball ball;
     public float minX = -7f;
     public float maxX = 7f;
+
+    public float maxScalePlatform;
+
+    public float minScalePlatform;
     // Update is called once per frame
     private void Start()
     {
@@ -24,7 +26,6 @@ public class Platform : MonoBehaviour
         {
             MoveWithMouse();
         }
-
     }
     void MoveWithMouse()
     {
@@ -42,5 +43,17 @@ public class Platform : MonoBehaviour
     void MoveWithBall()
     {
         transform.position = new Vector3(ball.transform.position.x, transform.position.y, 0);
+    }
+
+    public void ModifiScalePlatform(float scalePlatform)
+    {
+        if (transform.localScale.x < maxScalePlatform && transform.localScale.y < maxScalePlatform )
+        {
+            if (transform.localScale.x < maxScalePlatform && transform.localScale.y > minScalePlatform)
+            {
+                Vector3 scl = new Vector3(scalePlatform,0,0);
+                transform.localScale += scl;
+            }
+        }
     }
 }

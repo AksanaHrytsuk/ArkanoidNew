@@ -12,7 +12,6 @@ namespace PickUps
             {
                 ball[i].Duplicate();
             }
-        
         }
         private void OnTriggerEnter2D(Collider2D collision)
         {
@@ -23,6 +22,5 @@ namespace PickUps
                 Destroy(gameObject);
             }
         } 
-    
     }
 }

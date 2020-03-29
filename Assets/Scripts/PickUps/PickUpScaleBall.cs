@@ -10,13 +10,13 @@ public class PickUpScaleBall : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Platform")
+        if (collision.gameObject.CompareTag("Platform"))
         {
             ball = FindObjectOfType<Ball>();
             ball.ModifiScaleBall(changeScale);
             Destroy(gameObject);
         }
-        else if (collision.gameObject.tag == "LoseGame")
+        else if (collision.gameObject.CompareTag("LoseGame"))
         {
             Destroy(gameObject);
         }

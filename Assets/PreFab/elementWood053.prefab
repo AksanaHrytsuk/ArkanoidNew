@@ -140,6 +140,14 @@ MonoBehaviour:
     type: 3}
   pickupDoubleBall: {fileID: 8940284754966455408, guid: 028598a8503d1f4d7bf68f36f29c308a,
     type: 3}
+  pickupIncreaseScaleBall: {fileID: 8940284754966455408, guid: 26ef96c43099a8da0aaa60e8efb70b13,
+    type: 3}
+  pickupReduceScaleBall: {fileID: 8940284754966455408, guid: 996801ca7c5a0f1278765216c80640a5,
+    type: 3}
+  pickupReduceScalePlatform: {fileID: 8940284754966455408, guid: d6b77b5e9134043c7b3a5e347ba3da49,
+    type: 3}
+  pickupIncreaseScalePlatform: {fileID: 8940284754966455408, guid: 1edf6b8ecd63b492487949b710d963d2,
+    type: 3}
   probability: 80
 --- !u!60 &191563198495373647
 PolygonCollider2D:

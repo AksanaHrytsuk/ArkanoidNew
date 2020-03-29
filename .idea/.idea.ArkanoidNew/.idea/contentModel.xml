@@ -18,6 +18,7 @@
             <e p="PickUpBallPoints.cs" t="Include" />
             <e p="PickUpMultipleBall.cs" t="Include" />
             <e p="PickUpScaleBall.cs" t="Include" />
+            <e p="PickUpScalePlatform.cs" t="Include" />
             <e p="PickUpStick.cs" t="Include" />
           </e>
           <e p="Platform.cs" t="Include" />

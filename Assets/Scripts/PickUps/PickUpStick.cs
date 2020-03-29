@@ -14,7 +14,6 @@ namespace PickUps
             Debug.Log("Pickup trigger! " + collision.gameObject.name);
             if (collision.gameObject.CompareTag("Platform"))
             {
-                Debug.Log("much faster");
                 ApplyEffect();
                 Destroy(gameObject);
             }

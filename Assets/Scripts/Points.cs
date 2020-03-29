@@ -24,7 +24,6 @@ public class Points : MonoBehaviour
             gameObject.SetActive(false);
             Destroy(gameObject);
         }
-
         DontDestroyOnLoad(this.gameObject);
     }
 

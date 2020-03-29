@@ -20,7 +20,13 @@ public class Block : MonoBehaviour
     public GameObject pickupDownPoints;
     public GameObject pickupStickBall;
     public GameObject pickupDoubleBall;
-    //public GameObject pickupScaleBall;
+    public GameObject pickupIncreaseScaleBall;
+    public GameObject pickupReduceScaleBall;
+    //public GameObject pickupReduceScalePlatform;
+    public GameObject pickupIncreaseScalePlatform;
+
+
+
    //public GameObject pickupScalePlatform;
     public int probability;
     // Start is called before the first frame update
@@ -66,13 +72,15 @@ public class Block : MonoBehaviour
     {
         LevelManager.RemoveBlockCount();
         Destroy(gameObject);
-        CreatePickUp(pickupSpeed);
-        CreatePickUp(pickupUpPoints);
-        CreatePickUp(pickupDownPoints);
-        CreatePickUp(pickupStickBall);
-        CreatePickUp(pickupDoubleBall);
-        //CreatePickUp(pickupScaleBall);
-        //CreatePickUp(pickupScalePlatform);
+        // CreatePickUp(pickupSpeed);
+        // CreatePickUp(pickupUpPoints);
+        // CreatePickUp(pickupDownPoints);
+        // CreatePickUp(pickupStickBall);
+        // CreatePickUp(pickupDoubleBall);
+        //CreatePickUp(pickupIncreaseScaleBall);
+        //CreatePickUp(pickupReduceScaleBall);
+        //CreatePickUp(pickupReduceScalePlatform);
+        CreatePickUp(pickupIncreaseScalePlatform);
         if (isExploding)
         {
            // LayerMask layerMask = layerMask.GetMask("Block");

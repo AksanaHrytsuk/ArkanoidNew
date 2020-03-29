@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8548a706671f67d4c871f5744ee770e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExploding: 0
+  isExploding: 1
   explodeRadius: 2
   images:
   - {fileID: 21300000, guid: 93fda5e6de13d104b80129d0b6df29fa, type: 3}
@@ -139,4 +139,11 @@ MonoBehaviour:
     type: 3}
   pickupDoubleBall: {fileID: 8940284754966455408, guid: 028598a8503d1f4d7bf68f36f29c308a,
     type: 3}
+  pickupIncreaseScaleBall: {fileID: 8940284754966455408, guid: 26ef96c43099a8da0aaa60e8efb70b13,
+    type: 3}
+  pickupReduceScaleBall: {fileID: 8940284754966455408, guid: 996801ca7c5a0f1278765216c80640a5,
+    type: 3}
+  pickupReduceScalePlatform: {fileID: 8940284754966455408, guid: d6b77b5e9134043c7b3a5e347ba3da49,
+    type: 3}
+  pickupIncreaseScalePlatform: {fileID: 0}
   probability: 80
