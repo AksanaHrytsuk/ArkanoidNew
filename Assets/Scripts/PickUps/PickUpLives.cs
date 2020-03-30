@@ -2,24 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickUpScaleBall : MonoBehaviour
+public class PickUpLiveInc : MonoBehaviour
 {
-    public float changeScale;
-    Ball ball;
+    Points points;
+    public int livesAmount;
     // Start is called before the first frame update
-    private void ApplyAffect()
+    void Start()
     {
-        Ball[] ball = FindObjectsOfType<Ball>();
-        for (int i = 0; i < ball.Length; i++)
-        {
-            ball[i].ModifiScaleBall(changeScale);
-        }
+        points = FindObjectOfType<Points>();
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
+    private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.CompareTag("Platform"))
         {
-            ApplyAffect();
+            //Debug.Log("i'm here");
+            var pointsMaxHearts = points.maxHearts + livesAmount;
             Destroy(gameObject);
         }
         else if (collision.gameObject.CompareTag("LoseGame"))

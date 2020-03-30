@@ -12,13 +12,13 @@ public class PickUpBallPoints : MonoBehaviour
       points = FindObjectOfType<Points>();
     }
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.gameObject.tag == "Platform")
+        if (collision.gameObject.CompareTag("Platform"))
         {
             //Debug.Log("i'm here");
             points.countPoints(pointsAmount);
             Destroy(gameObject);
         }
-        else if (collision.gameObject.tag == "LoseGame")
+        else if (collision.gameObject.CompareTag("LoseGame"))
         {
             Destroy(gameObject);
         }

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,6 +7,7 @@ using UnityEngine.UI;
 public class Points : MonoBehaviour
 {
     public Text points;
+    public Text text;
     public int addPoints;
     WallDownScript wallDownScripts;
     int hearts;
@@ -14,7 +16,10 @@ public class Points : MonoBehaviour
 
     LoaderScens loaderScens;
 
-    // Start is called before the first frame update
+    public void Update()
+    {
+    }
+
     private void Awake()
     {
         Points[] pointsList = FindObjectsOfType<Points>();
@@ -27,14 +32,16 @@ public class Points : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-    public void ballDown()
+    public void BallDown()
     {
         loaderScens = FindObjectOfType<LoaderScens>();
-        hearts++;
+        maxHearts--;
         ball = FindObjectOfType<Ball>();
         ball.StopBall();
+        text.text = "Lives: " + maxHearts;
+
         //Debug.Log("CollisionEnterWall");
-        if (hearts >= maxHearts)
+        if (maxHearts == 0)
         {
             loaderScens.LoadNextSceneByName("Game Over");
         }
@@ -42,8 +49,10 @@ public class Points : MonoBehaviour
 
     public void countPoints(int score)
     {
+        text.text = "Lives: " + maxHearts;
+
         addPoints += score;
         points.text = "Points: " + addPoints;
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
 }

@@ -16,6 +16,7 @@
           <e p="PickUps" t="Include">
             <e p="PeekBallSpeed.cs" t="Include" />
             <e p="PickUpBallPoints.cs" t="Include" />
+            <e p="PickUpLives.cs" t="Include" />
             <e p="PickUpMultipleBall.cs" t="Include" />
             <e p="PickUpScaleBall.cs" t="Include" />
             <e p="PickUpScalePlatform.cs" t="Include" />

@@ -15,7 +15,7 @@ public class WallDownScript : MonoBehaviour
         {
             if (FindObjectsOfType<Ball>().Length == 1)
             {
-                points.ballDown();
+                points.BallDown();
             }
             else
             {
