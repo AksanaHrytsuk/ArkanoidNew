@@ -19,11 +19,15 @@ public class Block : MonoBehaviour
     public GameObject pickupUpPoints;
     public GameObject pickupDownPoints;
     public GameObject pickupStickBall;
-    public GameObject pickupDoubleBall;
-    public GameObject pickupIncreaseScaleBall;
+   // public GameObject pickupDoubleBall;
+    //public GameObject pickupIncreaseScaleBall;
     public GameObject pickupReduceScaleBall;
-    //public GameObject pickupReduceScalePlatform;
+    public GameObject pickupReduceScalePlatform;
     public GameObject pickupIncreaseScalePlatform;
+    public GameObject pickupGiveLive;
+    public GameObject pickupTakeLive;
+
+
 
 
 
@@ -72,11 +76,13 @@ public class Block : MonoBehaviour
         // CreatePickUp(pickupUpPoints);
         // CreatePickUp(pickupDownPoints);
         // CreatePickUp(pickupStickBall);
-        CreatePickUp(pickupDoubleBall);
-        CreatePickUp(pickupIncreaseScaleBall);
+        //CreatePickUp(pickupDoubleBall);
+        //CreatePickUp(pickupIncreaseScaleBall);
         //CreatePickUp(pickupReduceScaleBall);
         //CreatePickUp(pickupReduceScalePlatform);
         //CreatePickUp(pickupIncreaseScalePlatform);
+        CreatePickUp(pickupGiveLive);
+        CreatePickUp(pickupTakeLive);
         if (isExploding)
         {
             //explode
@@ -111,12 +117,16 @@ public class Block : MonoBehaviour
             if (pick != null)
             {
                 Vector3 pickupPosition = transform.position;
-                pickupPosition.x += Random.Range(-1, 1);
+                
+                // pickupPosition.x += Random.Range(-1, 1);
                 //Instantiate(pickup, ModifySpeed, Quaternion.identity);
                 if (Chance())
                 {
                     GameObject newObject = Instantiate(pick);
                     newObject.transform.position = pickupPosition;
+                    
+                    Vector3 direction = new Vector3(Random.Range(-100f, 100f), 100, 0);
+                    newObject.GetComponent<Rigidbody2D>().AddForce(direction);
                 }
             }
         }
