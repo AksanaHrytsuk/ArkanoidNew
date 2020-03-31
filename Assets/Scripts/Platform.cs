@@ -61,11 +61,10 @@ public class Platform : MonoBehaviour
 
     public void ModifiPlatform(float scalePlatform)
     {
-        Debug.Log("transform.localScale.x: " + transform.localScale.x);
         if (transform.localScale.x < maxScalePlatform )
-        {Debug.Log("Here 2");
+        {
             if (transform.localScale.x > minScalePlatform )
-            {Debug.Log("Here 3");
+            {
                 Vector3 scl = new Vector3(scalePlatform,0,0);
                 transform.localScale += scl;
             }

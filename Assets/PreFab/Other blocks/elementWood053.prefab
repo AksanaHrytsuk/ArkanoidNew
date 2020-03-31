@@ -152,7 +152,9 @@ MonoBehaviour:
     type: 3}
   pickupTakeLive: {fileID: 8940284754966455408, guid: fd334466c98c4da8d9f510e90d1280eb,
     type: 3}
-  probability: 50
+  pickupBallExpl: {fileID: 8940284754966455408, guid: a82d96a5b9adf0374917f35f15d791c1,
+    type: 3}
+  probability: 10
 --- !u!60 &191563198495373647
 PolygonCollider2D:
   m_ObjectHideFlags: 0

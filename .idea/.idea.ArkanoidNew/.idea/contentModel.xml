@@ -14,6 +14,7 @@
           <e p="LoaderScens.cs" t="Include" />
           <e p="Pause.cs" t="Include" />
           <e p="PickUps" t="Include">
+            <e p="PeekBallExpl.cs" t="Include" />
             <e p="PeekBallSpeed.cs" t="Include" />
             <e p="PickUpBallPoints.cs" t="Include" />
             <e p="PickUpKIllLive.cs" t="Include" />

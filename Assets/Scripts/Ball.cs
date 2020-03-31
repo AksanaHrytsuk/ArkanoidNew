@@ -12,7 +12,40 @@ public class Ball : MonoBehaviour
     Vector3 ballOffset;
     public float maxScale = 2f;
     public float minScale = 0.5f;
+    public bool isExploding;
+    
+    void Exploud()
+    {
+        if (isExploding)
+        {
+            //explode
 
+            //layer mask to filter physics objects
+            LayerMask layerMask = LayerMask.GetMask($"Block");
+
+            //find objects in radius
+            Collider2D[] objectsInRadius = Physics2D.OverlapCircleAll(transform.position, 2, layerMask);
+
+
+            foreach (Collider2D objectI in objectsInRadius)
+            {
+                if (objectI.gameObject == gameObject)
+                {
+                    continue; //the same gameObject ==> next iteration
+                }
+
+                Block block = objectI.gameObject.GetComponent<Block>();
+                if (block == null)
+                {
+                    Destroy(objectI.gameObject);
+                }
+                else
+                {
+                    block.DestroyBlock();
+                }
+            }
+        }
+    }
 
     public bool IsStarted()
     {
@@ -135,6 +168,7 @@ public class Ball : MonoBehaviour
                 ballOffset = transform.position - platform.transform.position; //вектор между платвормой и мячом
             }
         }
+        
     }
 
     /* Вызов событий у движка физики. 
