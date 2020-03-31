@@ -14,7 +14,7 @@ public class Ball : MonoBehaviour
     public float minScale = 0.5f;
     public bool isExploding;
     
-    void Exploud()
+    public void Exploud()
     {
         if (isExploding)
         {

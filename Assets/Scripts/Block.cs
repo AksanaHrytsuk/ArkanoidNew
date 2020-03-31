@@ -58,6 +58,8 @@ public class Block : MonoBehaviour
             hitPoint++;
             if (hitPoint <= images.Length)
             {
+                Ball ball = FindObjectOfType<Ball>();
+                ball.Exploud();
                 this.GetComponent<SpriteRenderer>().sprite = images[hitPoint - 1];
             }
             //Debug.Log(hitPoint);
@@ -113,6 +115,7 @@ public class Block : MonoBehaviour
                     block.DestroyBlock();
                 }
             }
+            
         }
 
         void CreatePickUp(GameObject pick)
