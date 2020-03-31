@@ -5,7 +5,7 @@ using UnityEngine;
 public class PickUpLives : MonoBehaviour
 {
     Points points;
-    int livesAmount = 1;
+    public  int livesAmount;
     // Start is called before the first frame update
     void Start()
     {

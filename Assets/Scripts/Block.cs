@@ -19,8 +19,8 @@ public class Block : MonoBehaviour
     public GameObject pickupUpPoints;
     public GameObject pickupDownPoints;
     public GameObject pickupStickBall;
-   // public GameObject pickupDoubleBall;
-    //public GameObject pickupIncreaseScaleBall;
+    public GameObject pickupDoubleBall;
+    public GameObject pickupIncreaseScaleBall;
     public GameObject pickupReduceScaleBall;
     public GameObject pickupReduceScalePlatform;
     public GameObject pickupIncreaseScalePlatform;
@@ -56,7 +56,7 @@ public class Block : MonoBehaviour
         else
         {
             hitPoint++;
-            if (hitPoint < 3)
+            if (hitPoint <= images.Length)
             {
                 this.GetComponent<SpriteRenderer>().sprite = images[hitPoint - 1];
             }
@@ -81,7 +81,7 @@ public class Block : MonoBehaviour
         //CreatePickUp(pickupReduceScaleBall);
         //CreatePickUp(pickupReduceScalePlatform);
         //CreatePickUp(pickupIncreaseScalePlatform);
-        CreatePickUp(pickupGiveLive);
+        //CreatePickUp(pickupGiveLive);
         CreatePickUp(pickupTakeLive);
         if (isExploding)
         {
