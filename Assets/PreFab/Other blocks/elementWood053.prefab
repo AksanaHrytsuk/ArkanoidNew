@@ -136,10 +136,12 @@ MonoBehaviour:
     type: 3}
   pickupDownPoints: {fileID: 7652866533153174522, guid: 2c9764816446272f794925daf3afcc1d,
     type: 3}
-  pickupStickBall: {fileID: 8940284754966455408, guid: fc386e9368ada41cd8fd937ae99e8ad1,
+  pickupStickBall: {fileID: 8940284754966455408, guid: bd347220376b732b0a59681fc3ae05ef,
     type: 3}
-  pickupDoubleBall: {fileID: 0}
-  pickupIncreaseScaleBall: {fileID: 0}
+  pickupDoubleBall: {fileID: 8940284754966455408, guid: 028598a8503d1f4d7bf68f36f29c308a,
+    type: 3}
+  pickupIncreaseScaleBall: {fileID: 8940284754966455408, guid: 26ef96c43099a8da0aaa60e8efb70b13,
+    type: 3}
   pickupReduceScaleBall: {fileID: 8940284754966455408, guid: 996801ca7c5a0f1278765216c80640a5,
     type: 3}
   pickupReduceScalePlatform: {fileID: 8940284754966455408, guid: d6b77b5e9134043c7b3a5e347ba3da49,
