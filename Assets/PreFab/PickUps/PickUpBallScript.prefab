@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8940284754966455413}
   - component: {fileID: 8940284754966455410}
   - component: {fileID: 8940284754966455411}
-  - component: {fileID: 9140504401497396818}
+  - component: {fileID: 3300217152283052232}
   m_Layer: 0
   m_Name: PickUpBallScript
   m_TagString: Untagged
@@ -121,7 +121,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &9140504401497396818
+--- !u!114 &3300217152283052232
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,6 +130,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 8940284754966455408}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03e9b82ff04e331f09ad8cffe311b83a, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b9a3856c2b1404d08200937a09d59b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointsAmount: -50
+  speedKoeff: 1.25

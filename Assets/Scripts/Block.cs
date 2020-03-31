@@ -72,7 +72,7 @@ public class Block : MonoBehaviour
     {
         LevelManager.RemoveBlockCount();
         Destroy(gameObject);
-        // CreatePickUp(pickupSpeed);
+         //CreatePickUp(pickupSpeed);
         // CreatePickUp(pickupUpPoints);
         // CreatePickUp(pickupDownPoints);
         // CreatePickUp(pickupStickBall);
@@ -82,7 +82,7 @@ public class Block : MonoBehaviour
         //CreatePickUp(pickupReduceScalePlatform);
         //CreatePickUp(pickupIncreaseScalePlatform);
         //CreatePickUp(pickupGiveLive);
-        CreatePickUp(pickupTakeLive);
+        //CreatePickUp(pickupTakeLive);
         if (isExploding)
         {
             //explode
