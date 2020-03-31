@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 [RequireComponent(typeof(Collider2D))]
 public class Block : MonoBehaviour
 {
@@ -28,11 +29,9 @@ public class Block : MonoBehaviour
     public GameObject pickupTakeLive;
 
 
-
-
-
-   //public GameObject pickupScalePlatform;
+    //public GameObject pickupScalePlatform;
     public int probability;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,7 +45,7 @@ public class Block : MonoBehaviour
         }
     }
 
- 
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (spriteRenderer.enabled == false)
@@ -68,21 +67,22 @@ public class Block : MonoBehaviour
             }
         }
     }
+
     void DestroyBlock()
     {
         LevelManager.RemoveBlockCount();
         Destroy(gameObject);
-         //CreatePickUp(pickupSpeed);
-        // CreatePickUp(pickupUpPoints);
-        // CreatePickUp(pickupDownPoints);
+        CreatePickUp(pickupSpeed);
+        CreatePickUp(pickupUpPoints);
+        CreatePickUp(pickupDownPoints);
         CreatePickUp(pickupStickBall);
-        //CreatePickUp(pickupDoubleBall);
-        //CreatePickUp(pickupIncreaseScaleBall);
-        //CreatePickUp(pickupReduceScaleBall);
-        //CreatePickUp(pickupReduceScalePlatform);
-        //CreatePickUp(pickupIncreaseScalePlatform);
-        //CreatePickUp(pickupGiveLive);
-        //CreatePickUp(pickupTakeLive);
+        CreatePickUp(pickupDoubleBall);
+        CreatePickUp(pickupIncreaseScaleBall);
+        CreatePickUp(pickupReduceScaleBall);
+        CreatePickUp(pickupReduceScalePlatform);
+        CreatePickUp(pickupIncreaseScalePlatform);
+        CreatePickUp(pickupGiveLive);
+        CreatePickUp(pickupTakeLive);
         if (isExploding)
         {
             //explode
@@ -93,7 +93,7 @@ public class Block : MonoBehaviour
             //find objects in radius
             Collider2D[] objectsInRadius = Physics2D.OverlapCircleAll(transform.position, explodeRadius, layerMask);
 
-           
+
             foreach (Collider2D objectI in objectsInRadius)
             {
                 if (objectI.gameObject == gameObject)
@@ -112,27 +112,28 @@ public class Block : MonoBehaviour
                 }
             }
         }
+
         void CreatePickUp(GameObject pick)
         {
             if (pick != null)
             {
                 Vector3 pickupPosition = transform.position;
-                
+
                 // pickupPosition.x += Random.Range(-1, 1);
                 //Instantiate(pickup, ModifySpeed, Quaternion.identity);
                 if (Chance())
                 {
                     GameObject newObject = Instantiate(pick);
                     newObject.transform.position = pickupPosition;
-                    
+
                     Vector3 direction = new Vector3(Random.Range(-100f, 100f), 100, 0);
                     newObject.GetComponent<Rigidbody2D>().AddForce(direction);
                 }
             }
         }
+
         bool Chance()
         {
-
             int chance = Random.Range(0, 100);
             if (chance < probability)
             {
@@ -144,10 +145,10 @@ public class Block : MonoBehaviour
             }
         }
     }
+
     void OnDrawGizmos()
     {
-     Gizmos.color = Color.white;
-     Gizmos.DrawWireSphere(transform.position, explodeRadius);
+        Gizmos.color = Color.white;
+        Gizmos.DrawWireSphere(transform.position, explodeRadius);
     }
 }
-
