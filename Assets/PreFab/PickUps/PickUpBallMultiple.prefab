@@ -133,4 +133,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 532d6fd68ca1a17c69300561bf05885c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointsAmount: 50
   ballsNumber: 2

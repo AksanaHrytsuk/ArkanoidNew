@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8940284754966455411}
   - component: {fileID: 5665877081312045041}
   m_Layer: 0
-  m_Name: PickUpBalIncreaselScale 1
+  m_Name: PickUpBallIncreaseScale
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -133,4 +133,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31184f738550157a19a879e2c82af4a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointsAmount: 50
   changeScale: 1.25

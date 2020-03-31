@@ -16,7 +16,7 @@ namespace PickUps
             if (collision.gameObject.CompareTag("Platform"))
             {
                 _platform = FindObjectOfType<Platform>();
-                _platform.ModifiScalePlatform(changeScale);
+                _platform.ModifiPlatform(changeScale);
                 Destroy(gameObject);
             }
             else if (collision.gameObject.CompareTag("LoseGame"))

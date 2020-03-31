@@ -2,10 +2,10 @@
 
 namespace PickUps
 {
-    public class PickUpMultipleBall : MonoBehaviour
+    public class PickUpMultipleBall : PickUpBallPoints
     {
         public int ballsNumber = 2;
-        void ApplyEffectMultipleBall()
+        public override void ApplyPickUp()
         {
             Ball[] ball = FindObjectsOfType<Ball>();
             for (int i = 0; i < ball.Length; i++)
@@ -13,14 +13,5 @@ namespace PickUps
                 ball[i].Duplicate();
             }
         }
-        private void OnTriggerEnter2D(Collider2D collision)
-        {
-            Debug.Log("Pickup trigger! " + collision.gameObject.name);
-            if (collision.gameObject.CompareTag("Platform"))
-            {
-                ApplyEffectMultipleBall();
-                Destroy(gameObject);
-            }
-        } 
     }
 }

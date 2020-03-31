@@ -11,6 +11,20 @@ public class Platform : MonoBehaviour
 
     public float minScalePlatform;
     // Update is called once per frame
+
+
+    public void ModifiScalePlatform(float scalePlatform)
+    {
+        if (transform.localScale.x < maxScalePlatform && transform.localScale.y < maxScalePlatform )
+        {
+            if (transform.localScale.x < maxScalePlatform && transform.localScale.y > minScalePlatform)
+            {
+                Vector3 scl = new Vector3(scalePlatform,0,0);
+                transform.localScale += scl;
+            }
+        }
+    }
+
     private void Start()
     {
         pointsCo = FindObjectOfType<Pause>();
@@ -45,7 +59,7 @@ public class Platform : MonoBehaviour
         transform.position = new Vector3(ball.transform.position.x, transform.position.y, 0);
     }
 
-    public void ModifiScalePlatform(float scalePlatform)
+    public void ModifiPlatform(float scalePlatform)
     {
         if (transform.localScale.x < maxScalePlatform && transform.localScale.y < maxScalePlatform )
         {

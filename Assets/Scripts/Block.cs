@@ -75,7 +75,7 @@ public class Block : MonoBehaviour
          //CreatePickUp(pickupSpeed);
         // CreatePickUp(pickupUpPoints);
         // CreatePickUp(pickupDownPoints);
-        // CreatePickUp(pickupStickBall);
+        CreatePickUp(pickupStickBall);
         //CreatePickUp(pickupDoubleBall);
         //CreatePickUp(pickupIncreaseScaleBall);
         //CreatePickUp(pickupReduceScaleBall);

@@ -20,10 +20,15 @@ public class LoaderScens : MonoBehaviour
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     }
 
-    public void RestartLevel()
+    // public void RestartLevel()
+    // {
+    //     string name = SceneManager.GetActiveScene().name;
+    //     SceneManager.LoadScene(name);
+    // }
+
+    public void LoadLevel(int index)
     {
-        string name = SceneManager.GetActiveScene().name;
-        SceneManager.LoadScene(name);
+        SceneManager.LoadScene(index);
     }
     //public void LoadeLevel()
 }

@@ -645,6 +645,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003984631744903654, guid: 832ec568f68246341a69fa7a0c2ca3db,
         type: 3}
+      propertyPath: images.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003984631744903654, guid: 832ec568f68246341a69fa7a0c2ca3db,
+        type: 3}
       propertyPath: pickup
       value: 
       objectReference: {fileID: 0}
@@ -1168,6 +1173,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003984631744903654, guid: 832ec568f68246341a69fa7a0c2ca3db,
         type: 3}
+      propertyPath: images.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003984631744903654, guid: 832ec568f68246341a69fa7a0c2ca3db,
+        type: 3}
       propertyPath: probability
       value: 80
       objectReference: {fileID: 0}
@@ -1649,6 +1659,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6087510053487869171, guid: 7517eac7c0abdfa31814787fc4c5547c,
+        type: 3}
+      propertyPath: images.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6087510053487869171, guid: 7517eac7c0abdfa31814787fc4c5547c,
         type: 3}
@@ -2426,10 +2441,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 497616759, guid: 7989bce759fc2e54b90e170a1880be85, type: 3}
+      propertyPath: m_Text
+      value: 'Lives: 5'
+      objectReference: {fileID: 0}
     - target: {fileID: 308466442688737725, guid: 7989bce759fc2e54b90e170a1880be85,
         type: 3}
       propertyPath: maxHearts
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 671209396643507401, guid: 7989bce759fc2e54b90e170a1880be85,
         type: 3}
@@ -3020,6 +3039,11 @@ PrefabInstance:
     - target: {fileID: 5484728146336090298, guid: 7517eac7c0abdfa31814787fc4c5547c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6087510053487869171, guid: 7517eac7c0abdfa31814787fc4c5547c,
+        type: 3}
+      propertyPath: images.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6698672525328684755, guid: 7517eac7c0abdfa31814787fc4c5547c,
