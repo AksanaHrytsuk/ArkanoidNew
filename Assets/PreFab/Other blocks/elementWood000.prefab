@@ -142,7 +142,7 @@ MonoBehaviour:
     type: 3}
   pickupTakeLive: {fileID: 8940284754966455408, guid: fd334466c98c4da8d9f510e90d1280eb,
     type: 3}
-  probability: 100
+  probability: 10
 --- !u!61 &2052267370
 BoxCollider2D:
   m_ObjectHideFlags: 0
