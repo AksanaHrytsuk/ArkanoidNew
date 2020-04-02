@@ -8,12 +8,18 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
-          <e p="Ball.cs" t="Include" />
-          <e p="Block.cs" t="Include" />
-          <e p="LevelManager.cs" t="Include" />
-          <e p="LoaderScens.cs" t="Include" />
-          <e p="Pause.cs" t="Include" />
-          <e p="PickUps" t="Include">
+          <e p="All Scripts" t="Include">
+            <e p="Ball.cs" t="Include" />
+            <e p="Block.cs" t="Include" />
+            <e p="LevelManager.cs" t="Include" />
+            <e p="LoaderScens.cs" t="Include" />
+            <e p="Pause.cs" t="Include" />
+            <e p="Platform.cs" t="Include" />
+            <e p="Points.cs" t="Include" />
+            <e p="Result.cs" t="Include" />
+            <e p="WallDownScript.cs" t="Include" />
+          </e>
+          <e p="PickUps Scripts" t="Include">
             <e p="PeekBallExpl.cs" t="Include" />
             <e p="PeekBallSpeed.cs" t="Include" />
             <e p="PickUpBallPoints.cs" t="Include" />
@@ -24,10 +30,6 @@
             <e p="PickUpScalePlatform.cs" t="Include" />
             <e p="PickUpStick.cs" t="Include" />
           </e>
-          <e p="Platform.cs" t="Include" />
-          <e p="Points.cs" t="Include" />
-          <e p="Result.cs" t="Include" />
-          <e p="WallDownScript.cs" t="Include" />
         </e>
       </e>
       <e p="Temp/bin" t="ExcludeRecursive" />

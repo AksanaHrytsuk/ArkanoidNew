@@ -12,14 +12,8 @@ public class Result : MonoBehaviour
         Points arkanoid = FindObjectOfType<Points>();
         //Debug.Log(arkanoid);
         int number = arkanoid.addPoints;
-        text.text = "Game Over, boy!\n Points: " + number;
-        Destroy(arkanoid.gameObject); //destroy gameobjec
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        text.text = "Game Over!\n Points: " + number;
+        Destroy(arkanoid.gameObject); //destroy gameObject
     }
 }
 

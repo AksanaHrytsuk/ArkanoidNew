@@ -6,16 +6,21 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Collider2D))]
 public class Block : MonoBehaviour
 {
+    [Header("Config parametrs")]
+    public bool InvisibleSprite;
     public bool isExploding;
     public float explodeRadius;
-
-    public Sprite[] images;
     public int hitPoint;
     public int scorePoints;
+
+    public Sprite[] images;
+    
+    [Header("UI Elements")]
     Points pointsControl;
     LevelManager LevelManager;
     SpriteRenderer spriteRenderer;
-    public bool InvisibleSprite;
+    
+    
     public GameObject pickupSpeed;
     public GameObject pickupUpPoints;
     public GameObject pickupDownPoints;
@@ -73,6 +78,7 @@ public class Block : MonoBehaviour
 
     public void DestroyBlock()
     {
+        Debug.Log(gameObject.name);
         LevelManager.RemoveBlockCount();
         Destroy(gameObject);
         CreatePickUp(pickupSpeed);

@@ -14,6 +14,6 @@ public class PeekBallExpl : PickUpBallPoints
 
     public override void ApplyPickUp()
     {
-        ball.isExploding=true;
+        ball.isExploding = true;
     }
 }

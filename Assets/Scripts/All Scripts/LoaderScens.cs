@@ -30,6 +30,5 @@ public class LoaderScens : MonoBehaviour
     {
         SceneManager.LoadScene(index);
     }
-    //public void LoadeLevel()
 }
 

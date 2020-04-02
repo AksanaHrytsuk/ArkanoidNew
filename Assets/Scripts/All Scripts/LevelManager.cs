@@ -1,16 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
     public int blockNumbers;
+    public float loadLevelDelay = 1f;
     LoaderScens loaderScens;
 
     // Start is called before the first frame update
     void Start()
     {
-        // Block[] allBlocks FindObjectOfType<Block>();
+        // Block[] allBlocks FindObjectsOfType<Block>();
         // int blocksNumber = allBlocks.Length;
         loaderScens = FindObjectOfType<LoaderScens>();
     }
@@ -19,12 +18,19 @@ public class LevelManager : MonoBehaviour
     {
         blockNumbers++;
     }
-    public void RemoveBlockCount()
+   
+    public void RemoveBlockCount()                      
     {
         blockNumbers--;
         if (blockNumbers == 0)
         {
-            loaderScens.LoadNextScene();
+            Time.timeScale = 0.5f;
+            Invoke(nameof(LoadNextLevel), loadLevelDelay);
         }
+    }
+
+    private void LoadNextLevel()
+    {
+        loaderScens.LoadNextScene();
     }
 }

@@ -1,25 +1,21 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class Points : MonoBehaviour
 {
+    [Header("UI Elements")]
     public Text points;
     public Text text;
+    
+    [Header("Config parametrs")]
     public int addPoints;
-    WallDownScript wallDownScripts;
-    int hearts;
-    Ball ball;
     public int maxHearts;
-
+    int hearts;
+    
+    WallDownScript wallDownScripts;
+    Ball ball;
+    
     LoaderScens loaderScens;
-
-    public void Update()
-    {
-    }
-
     private void Awake()
     {
         Points[] pointsList = FindObjectsOfType<Points>();
@@ -39,7 +35,6 @@ public class Points : MonoBehaviour
         ball = FindObjectOfType<Ball>();
         ball.StopBall();
         text.text = "Lives: " + maxHearts;
-
         //Debug.Log("CollisionEnterWall");
         if (maxHearts == 0)
         {
@@ -50,9 +45,7 @@ public class Points : MonoBehaviour
     public void countPoints(int score)
     {
         text.text = "Lives: " + maxHearts;
-
         addPoints += score;
         points.text = "Points: " + addPoints;
-        //DontDestroyOnLoad(gameObject);
     }
 }

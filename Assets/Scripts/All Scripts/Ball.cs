@@ -9,11 +9,12 @@ public class Ball : MonoBehaviour
     bool sticky;
     Platform platform;
     Rigidbody2D rb;
+    
     Vector3 ballOffset;
     public float maxScale = 2f;
     public float minScale = 0.5f;
     public bool isExploding;
-    
+    private AudioSource _audio;
     public void Exploud()
     {
         if (isExploding)
@@ -59,6 +60,7 @@ public class Ball : MonoBehaviour
 
     private void Awake()
     {
+        _audio = GetComponent<AudioSource>();
         started = false;
 
         rb = GetComponent<Rigidbody2D>(); //Найти компонент Rigidbody2D на том же гейм обжекте
@@ -79,8 +81,6 @@ public class Ball : MonoBehaviour
             }
         }
     }
-
-   
 
     public void Duplicate()
     {
@@ -158,6 +158,7 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        _audio.Play();
         if (collision.gameObject.CompareTag("Platform"))
         {
             if (sticky)
@@ -168,7 +169,11 @@ public class Ball : MonoBehaviour
                 ballOffset = transform.position - platform.transform.position; //вектор между платвормой и мячом
             }
         }
-        
+
+        if (collision.gameObject.CompareTag($"Block"))
+        {
+            Exploud();
+        }
     }
 
     /* Вызов событий у движка физики. 
