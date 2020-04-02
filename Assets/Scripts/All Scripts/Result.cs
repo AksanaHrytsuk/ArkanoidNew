@@ -13,7 +13,7 @@ public class Result : MonoBehaviour
         //Debug.Log(arkanoid);
         int number = arkanoid.addPoints;
         text.text = "Game Over!\n Points: " + number;
-        Destroy(arkanoid.gameObject); //destroy gameObject
+        Destroy(arkanoid.gameObject); //destroy gameobjec
     }
 }
 

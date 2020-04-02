@@ -12,6 +12,7 @@ public class Block : MonoBehaviour
     public float explodeRadius;
     public int hitPoint;
     public int scorePoints;
+   
 
     public Sprite[] images;
     
@@ -19,6 +20,9 @@ public class Block : MonoBehaviour
     Points pointsControl;
     LevelManager LevelManager;
     SpriteRenderer spriteRenderer;
+    //private AudioSource audio;
+    public AudioClip destroySound;
+    public GameObject destroyFX;
     
     
     public GameObject pickupSpeed;
@@ -41,6 +45,7 @@ public class Block : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //audio = GetComponent<AudioSource>();
         LevelManager = FindObjectOfType<LevelManager>();
         LevelManager.AddBlockCount();
         pointsControl = FindObjectOfType<Points>();
@@ -64,7 +69,7 @@ public class Block : MonoBehaviour
             if (hitPoint <= images.Length)
             {
                 Ball ball = FindObjectOfType<Ball>();
-                ball.Exploud();
+                ball.ExploudBall();
                 this.GetComponent<SpriteRenderer>().sprite = images[hitPoint - 1];
             }
             //Debug.Log(hitPoint);
@@ -78,9 +83,14 @@ public class Block : MonoBehaviour
 
     public void DestroyBlock()
     {
-        Debug.Log(gameObject.name);
+        
         LevelManager.RemoveBlockCount();
+        
         Destroy(gameObject);
+        
+        AudioSource audio = FindObjectOfType<AudioSource>();
+        audio.PlayOneShot(destroySound);
+        
         CreatePickUp(pickupSpeed);
         CreatePickUp(pickupUpPoints);
         CreatePickUp(pickupDownPoints);
@@ -140,6 +150,14 @@ public class Block : MonoBehaviour
                     Vector3 direction = new Vector3(Random.Range(-100f, 100f), 100, 0);
                     newObject.GetComponent<Rigidbody2D>().AddForce(direction);
                 }
+            }
+
+            if (destroyFX != null)
+            {
+                Vector3 fxPosition = transform.position;
+                GameObject newObject = Instantiate(destroyFX, fxPosition, Quaternion.identity);
+                Destroy(newObject, 5f);
+
             }
         }
 

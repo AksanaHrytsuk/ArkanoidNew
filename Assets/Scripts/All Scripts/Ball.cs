@@ -15,7 +15,7 @@ public class Ball : MonoBehaviour
     public float minScale = 0.5f;
     public bool isExploding;
     private AudioSource _audio;
-    public void Exploud()
+    public void ExploudBall()
     {
         if (isExploding)
         {
@@ -159,6 +159,7 @@ public class Ball : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         _audio.Play();
+        //_audio.Stop(); switch off sound
         if (collision.gameObject.CompareTag("Platform"))
         {
             if (sticky)
@@ -169,10 +170,9 @@ public class Ball : MonoBehaviour
                 ballOffset = transform.position - platform.transform.position; //вектор между платвормой и мячом
             }
         }
-
-        if (collision.gameObject.CompareTag($"Block"))
+        if (collision.gameObject.CompareTag("Block"))
         {
-            Exploud();
+            ExploudBall();
         }
     }
 
