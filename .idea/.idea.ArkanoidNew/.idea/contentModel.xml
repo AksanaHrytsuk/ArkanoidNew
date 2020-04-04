@@ -55,7 +55,9 @@
             <e p="WallDownScript.cs" t="Include" />
           </e>
           <e p="BestScoreText.cs" t="Include" />
-          <e p="MusicPlayer.cs" t="Include" />
+          <e p="Music Scripts" t="Include">
+            <e p="MusicPlayer.cs" t="Include" />
+          </e>
           <e p="PickUps Scripts" t="Include">
             <e p="PeekBallExpl.cs" t="Include" />
             <e p="PeekBallSpeed.cs" t="Include" />

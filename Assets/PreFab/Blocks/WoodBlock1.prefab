@@ -121,14 +121,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8548a706671f67d4c871f5744ee770e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InvisibleSprite: 0
   isExploding: 0
   explodeRadius: 0
+  hitPoint: 0
+  scorePoints: 1
   images:
   - {fileID: 21300000, guid: f6fe56be7b4a9344ba264494626f0720, type: 3}
   - {fileID: 21300000, guid: 2a6749515291b414482baa7517bc5ebb, type: 3}
-  hitPoint: 0
-  scorePoints: 1
-  InvisibleSprite: 0
+  destroySound: {fileID: 0}
+  destroyFX: {fileID: 0}
   pickupSpeed: {fileID: 8940284754966455408, guid: fc386e9368ada41cd8fd937ae99e8ad1,
     type: 3}
   pickupUpPoints: {fileID: 872451533855440258, guid: 4eda4b930403694b786b1594b908fc4e,

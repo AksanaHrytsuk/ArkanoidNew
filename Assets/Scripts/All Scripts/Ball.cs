@@ -4,17 +4,20 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    public float speed;
-    bool started; // false по умолчанию
-    bool sticky;
+    [Header("UI Elements")]    
     Platform platform;
     Rigidbody2D rb;
-    
+    private AudioSource _audio;
     Vector3 ballOffset;
+
+    [Header("Config Elements")]    
+    public float speed;
     public float maxScale = 2f;
     public float minScale = 0.5f;
     public bool isExploding;
-    private AudioSource _audio;
+    bool started; // false по умолчанию
+    bool sticky;
+    
     public void ExploudBall()
     {
         if (isExploding)
@@ -60,10 +63,11 @@ public class Ball : MonoBehaviour
 
     private void Awake()
     {
-        _audio = GetComponent<AudioSource>();
         started = false;
 
         rb = GetComponent<Rigidbody2D>(); //Найти компонент Rigidbody2D на том же гейм обжекте
+        _audio = GetComponent<AudioSource>();
+
     }
 
     public void ModifySpeed(float modificator)
@@ -99,7 +103,7 @@ public class Ball : MonoBehaviour
         platform = FindObjectOfType<Platform>(); // находит геймОбжек Platform
         rb = GetComponent<Rigidbody2D>(); // найти компонент Rigidbody2D в том же геймОбжект, где находится скрипт
         ballOffset = transform.position - platform.transform.position; //вектор между платформой и мячом
-        Debug.Log(ballOffset);
+        //Debug.Log(ballOffset);
     }
 
     // Update is called once per frame
@@ -170,7 +174,7 @@ public class Ball : MonoBehaviour
                 ballOffset = transform.position - platform.transform.position; //вектор между платвормой и мячом
             }
         }
-        if (collision.gameObject.CompareTag("Block"))
+        if (collision.gameObject.CompareTag("Ball"))
         {
             ExploudBall();
         }

@@ -12,12 +12,6 @@ public class BestScoreText : MonoBehaviour
     void Start()
     {
         int bestScore = PlayerPrefs.GetInt("BestScore", 0);
-        bestScoreTxt.text = "Best score " + bestScore;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        bestScoreTxt.text = "Best score: " + bestScore;
     }
 }

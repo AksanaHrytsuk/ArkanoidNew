@@ -10,10 +10,16 @@ public class Result : MonoBehaviour
     void Start()
     {
         Points arkanoid = FindObjectOfType<Points>();
-        //Debug.Log(arkanoid);
         int number = arkanoid.addPoints;
-        text.text = "Game Over!\n Points: " + number;
-        Destroy(arkanoid.gameObject); //destroy gameobjec
+        text.text = "Points: " + number;
+        Destroy(arkanoid.gameObject); //destroy gameObject
+        
+        int previousScore = PlayerPrefs.GetInt("BestScore", 0);
+        
+        if (number > previousScore)
+        {
+            PlayerPrefs.SetInt("BestScore", number);
+        }
     }
 }
 

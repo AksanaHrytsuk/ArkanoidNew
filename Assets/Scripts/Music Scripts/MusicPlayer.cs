@@ -6,14 +6,15 @@ public class MusicPlayer : MonoBehaviour
 {
     private void Awake()
     {
-        MusicPlayer[] pointsList = FindObjectsOfType<MusicPlayer>();
-        Debug.Log(pointsList.Length);
-        if (pointsList.Length > 1)
+        // Find all musicPlayers on the scene
+        MusicPlayer[] musicPlayers = FindObjectsOfType<MusicPlayer>();
+        Debug.Log(musicPlayers.Length);
+        if (musicPlayers.Length > 1)
         {
-            gameObject.SetActive(false);
+            // if more then one => destroy gameObject
             Destroy(gameObject);
+            gameObject.SetActive(false);
         }
-        DontDestroyOnLoad(this.gameObject);
     }
     // Start is called before the first frame update
     void Start()

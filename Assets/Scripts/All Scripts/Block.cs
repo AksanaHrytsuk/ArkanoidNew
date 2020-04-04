@@ -13,13 +13,11 @@ public class Block : MonoBehaviour
     public int hitPoint;
     public int scorePoints;
    
-
-    public Sprite[] images;
-    
     [Header("UI Elements")]
     Points pointsControl;
     LevelManager LevelManager;
     SpriteRenderer spriteRenderer;
+    public Sprite[] images;
     //private AudioSource audio;
     public AudioClip destroySound;
     public GameObject destroyFX;
@@ -56,7 +54,6 @@ public class Block : MonoBehaviour
         }
     }
 
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (spriteRenderer.enabled == false)
@@ -83,7 +80,6 @@ public class Block : MonoBehaviour
 
     public void DestroyBlock()
     {
-        
         LevelManager.RemoveBlockCount();
         
         Destroy(gameObject);
@@ -156,8 +152,7 @@ public class Block : MonoBehaviour
             {
                 Vector3 fxPosition = transform.position;
                 GameObject newObject = Instantiate(destroyFX, fxPosition, Quaternion.identity);
-                Destroy(newObject, 5f);
-
+                Destroy(newObject, 3f);
             }
         }
 

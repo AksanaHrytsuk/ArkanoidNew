@@ -1250,6 +1250,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8337074171354326898, guid: 84a9976c46e81989f816dd3579665999,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8337074171354326899, guid: 84a9976c46e81989f816dd3579665999,
         type: 3}
       propertyPath: m_Name
@@ -1468,6 +1473,8 @@ MonoBehaviour:
   images:
   - {fileID: 21300000, guid: f4d8f3314d0269c4ab70f7b780f34f08, type: 3}
   - {fileID: 21300000, guid: 1a776119a2d47454fba17a668a504214, type: 3}
+  destroySound: {fileID: 0}
+  destroyFX: {fileID: 0}
   pickupSpeed: {fileID: 0}
   pickupUpPoints: {fileID: 0}
   pickupDownPoints: {fileID: 0}
