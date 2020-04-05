@@ -11,7 +11,7 @@ namespace PickUps
         }
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            Debug.Log("Pickup trigger! " + collision.gameObject.name);
+            // Debug.Log("Pickup trigger! " + collision.gameObject.name);
             if (collision.gameObject.CompareTag("Platform"))
             {
                 ApplyEffect();

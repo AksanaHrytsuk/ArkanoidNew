@@ -2433,11 +2433,6 @@ PrefabInstance:
       propertyPath: m_Text
       value: 'Lives: 5'
       objectReference: {fileID: 0}
-    - target: {fileID: 308466442688737725, guid: 7989bce759fc2e54b90e170a1880be85,
-        type: 3}
-      propertyPath: maxHearts
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 671209396643507401, guid: 7989bce759fc2e54b90e170a1880be85,
         type: 3}
       propertyPath: m_Name
@@ -2516,7 +2511,7 @@ PrefabInstance:
     - target: {fileID: 7449640327084593883, guid: 7989bce759fc2e54b90e170a1880be85,
         type: 3}
       propertyPath: autoplay
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7989bce759fc2e54b90e170a1880be85, type: 3}

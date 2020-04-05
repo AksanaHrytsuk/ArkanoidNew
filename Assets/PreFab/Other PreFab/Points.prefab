@@ -125,7 +125,7 @@ MonoBehaviour:
   points: {fileID: 6663593762095156814}
   text: {fileID: 497616759}
   addPoints: 0
-  maxHearts: 3
+  maxHearts: 5
 --- !u!1001 &2103611007
 PrefabInstance:
   m_ObjectHideFlags: 0
