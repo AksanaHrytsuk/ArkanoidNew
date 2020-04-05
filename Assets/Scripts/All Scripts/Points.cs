@@ -19,7 +19,7 @@ public class Points : MonoBehaviour
     private void Awake()
     {
         Points[] pointsList = FindObjectsOfType<Points>();
-        Debug.Log(pointsList.Length);
+        // Debug.Log(pointsList.Length);
         if (pointsList.Length > 1)
         {
             gameObject.SetActive(false);

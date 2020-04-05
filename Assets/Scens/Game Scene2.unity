@@ -411,11 +411,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ExploBlock
       objectReference: {fileID: 0}
-    - target: {fileID: 1003984631744903654, guid: 6f2c306fe4d5ee1e1a63f84dbca523e3,
-        type: 3}
-      propertyPath: explodeRadius
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2c306fe4d5ee1e1a63f84dbca523e3, type: 3}
 --- !u!1001 &301037604
@@ -613,7 +608,7 @@ GameObject:
   - component: {fileID: 347151246}
   m_Layer: 0
   m_Name: Wall2Left
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -665,6 +660,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 961346566}
     m_Modifications:
+    - target: {fileID: 2052267370, guid: 8d2942663c6ae2119aa73bdfefe1e4cf, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2262907557039045222, guid: 8d2942663c6ae2119aa73bdfefe1e4cf,
         type: 3}
       propertyPath: pickup
@@ -734,19 +733,15 @@ PrefabInstance:
     - target: {fileID: 4445741093370593887, guid: 8d2942663c6ae2119aa73bdfefe1e4cf,
         type: 3}
       propertyPath: m_Name
-      value: Circle (1)
+      value: Circle 2
       objectReference: {fileID: 0}
     - target: {fileID: 4445741093370593887, guid: 8d2942663c6ae2119aa73bdfefe1e4cf,
         type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4445741093370593887, guid: 8d2942663c6ae2119aa73bdfefe1e4cf,
-        type: 3}
-      propertyPath: m_Layer
-      value: 5
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2052267370, guid: 8d2942663c6ae2119aa73bdfefe1e4cf, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8d2942663c6ae2119aa73bdfefe1e4cf, type: 3}
 --- !u!1001 &516884285
 PrefabInstance:
@@ -820,11 +815,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1003984631744903650, guid: 832ec568f68246341a69fa7a0c2ca3db,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 832ec568f68246341a69fa7a0c2ca3db, type: 3}
 --- !u!1 &526325313
@@ -839,7 +829,7 @@ GameObject:
   - component: {fileID: 526325315}
   m_Layer: 0
   m_Name: Wall3Right
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -894,9 +884,9 @@ GameObject:
   m_Component:
   - component: {fileID: 528029805}
   - component: {fileID: 528029806}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Trail
-  m_TagString: Untagged
+  m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -954,7 +944,7 @@ TrailRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -10
+  m_SortingOrder: 0
   m_Time: 0.5
   m_Parameters:
     serializedVersion: 3
@@ -1043,7 +1033,7 @@ GameObject:
   - component: {fileID: 531739874}
   m_Layer: 0
   m_Name: Wall1Down
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1112,7 +1102,7 @@ GameObject:
   - component: {fileID: 638500740}
   m_Layer: 0
   m_Name: Wall4Up
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1319,11 +1309,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6106299979458416141, guid: 2e3e251fc22a255c48d31fdd54693420,
-        type: 3}
-      propertyPath: m_Layer
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 6228318900197543311, guid: 2e3e251fc22a255c48d31fdd54693420,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1427,32 +1412,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 419258236}
   m_PrefabAsset: {fileID: 0}
---- !u!61 &898639446
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 898639443}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!114 &898639447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1475,18 +1434,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 1a776119a2d47454fba17a668a504214, type: 3}
   destroySound: {fileID: 0}
   destroyFX: {fileID: 0}
-  pickupSpeed: {fileID: 0}
-  pickupUpPoints: {fileID: 0}
-  pickupDownPoints: {fileID: 0}
-  pickupStickBall: {fileID: 0}
-  pickupDoubleBall: {fileID: 0}
-  pickupIncreaseScaleBall: {fileID: 0}
-  pickupReduceScaleBall: {fileID: 0}
-  pickupReduceScalePlatform: {fileID: 0}
-  pickupIncreaseScalePlatform: {fileID: 0}
-  pickupGiveLive: {fileID: 0}
-  pickupTakeLive: {fileID: 0}
-  pickupBallExpl: {fileID: 0}
+  PicUps: []
   probability: 0
 --- !u!4 &906117835 stripped
 Transform:
@@ -1807,10 +1755,15 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1003984631744903655, guid: 832ec568f68246341a69fa7a0c2ca3db,
+    - target: {fileID: 1003984631744903654, guid: 832ec568f68246341a69fa7a0c2ca3db,
         type: 3}
-      propertyPath: m_Size.y
-      value: 0.9
+      propertyPath: images.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003984631744903654, guid: 832ec568f68246341a69fa7a0c2ca3db,
+        type: 3}
+      propertyPath: isExploding
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003984631744903655, guid: 832ec568f68246341a69fa7a0c2ca3db,
         type: 3}
@@ -2089,7 +2042,7 @@ GameObject:
   - component: {fileID: 1663931553}
   - component: {fileID: 1663931552}
   - component: {fileID: 1663931554}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ball
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -2310,6 +2263,7 @@ MonoBehaviour:
   maxScale: 2
   minScale: 0.5
   isExploding: 0
+  explodeRadius: 2
 --- !u!4 &1708777030 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5484728146336090298, guid: 7517eac7c0abdfa31814787fc4c5547c,
@@ -2511,7 +2465,7 @@ PrefabInstance:
     - target: {fileID: 7449640327084593883, guid: 7989bce759fc2e54b90e170a1880be85,
         type: 3}
       propertyPath: autoplay
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7989bce759fc2e54b90e170a1880be85, type: 3}
@@ -2527,7 +2481,7 @@ GameObject:
   - component: {fileID: 1987874150}
   - component: {fileID: 1987874149}
   - component: {fileID: 1987874152}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Platform
   m_TagString: Platform
   m_Icon: {fileID: 0}
@@ -2720,44 +2674,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 832ec568f68246341a69fa7a0c2ca3db, type: 3}
---- !u!1 &2052267367 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4445741093370593887, guid: 8d2942663c6ae2119aa73bdfefe1e4cf,
-    type: 3}
-  m_PrefabInstance: {fileID: 5275315915744878550}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2052267368 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2372075745467946584, guid: 8d2942663c6ae2119aa73bdfefe1e4cf,
     type: 3}
   m_PrefabInstance: {fileID: 5275315915744878550}
   m_PrefabAsset: {fileID: 0}
---- !u!61 &2052267370
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2052267367}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0.19
 --- !u!4 &2108250786 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1003984631744903648, guid: 832ec568f68246341a69fa7a0c2ca3db,
@@ -2834,19 +2756,15 @@ PrefabInstance:
     - target: {fileID: 4445741093370593887, guid: 8d2942663c6ae2119aa73bdfefe1e4cf,
         type: 3}
       propertyPath: m_Name
-      value: Circle
+      value: Circle 1
       objectReference: {fileID: 0}
     - target: {fileID: 4445741093370593887, guid: 8d2942663c6ae2119aa73bdfefe1e4cf,
         type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4445741093370593887, guid: 8d2942663c6ae2119aa73bdfefe1e4cf,
-        type: 3}
-      propertyPath: m_Layer
-      value: 5
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2052267370, guid: 8d2942663c6ae2119aa73bdfefe1e4cf, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8d2942663c6ae2119aa73bdfefe1e4cf, type: 3}
 --- !u!1001 &7818886588039345353
 PrefabInstance:
@@ -2864,11 +2782,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6106299979458416141, guid: 2e3e251fc22a255c48d31fdd54693420,
-        type: 3}
-      propertyPath: m_Layer
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6228318900197543311, guid: 2e3e251fc22a255c48d31fdd54693420,
         type: 3}
@@ -2925,7 +2838,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6024996015404760784, guid: 2e3e251fc22a255c48d31fdd54693420, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2e3e251fc22a255c48d31fdd54693420, type: 3}
 --- !u!1001 &8593270630248360245
 PrefabInstance:

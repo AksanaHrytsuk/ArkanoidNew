@@ -15,6 +15,7 @@ public class Ball : MonoBehaviour
     public float maxScale = 2f;
     public float minScale = 0.5f;
     public bool isExploding;
+    public float explodeRadius;
     bool started; // false по умолчанию
     bool sticky;
     
@@ -28,7 +29,7 @@ public class Ball : MonoBehaviour
             LayerMask layerMask = LayerMask.GetMask($"Block");
 
             //find objects in radius
-            Collider2D[] objectsInRadius = Physics2D.OverlapCircleAll(transform.position, 2, layerMask);
+            Collider2D[] objectsInRadius = Physics2D.OverlapCircleAll(transform.position, explodeRadius, layerMask);
 
 
             foreach (Collider2D objectI in objectsInRadius)
@@ -145,8 +146,10 @@ public class Ball : MonoBehaviour
     {
         started = true;
         int way = Random.Range(0, 2) * 2 - 1;
-        float rand = Random.Range(0, speed) * way;
-        Vector2 force = new Vector2(way * (speed - rand), (speed + rand));
+        
+        // float rand = Random.Range(0, speed) * way;
+        // Vector2 force = new Vector2(way * (speed - rand), (speed + rand)); рандомный угол наклона мяча при запуске
+        Vector2 force = new Vector2(way * speed, speed);
         rb.AddForce(force);
     }
 
@@ -173,9 +176,12 @@ public class Ball : MonoBehaviour
 
                 ballOffset = transform.position - platform.transform.position; //вектор между платвормой и мячом
             }
+            
         }
-        if (collision.gameObject.CompareTag("Ball"))
+        
+        if (collision.gameObject.CompareTag($"Block"))
         {
+            Debug.Log("Взрыв мяча!");
             ExploudBall();
         }
     }

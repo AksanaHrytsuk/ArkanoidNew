@@ -21,20 +21,20 @@ public class Block : MonoBehaviour
     //private AudioSource audio;
     public AudioClip destroySound;
     public GameObject destroyFX;
-    
-    
-    public GameObject pickupSpeed;
-    public GameObject pickupUpPoints;
-    public GameObject pickupDownPoints;
-    public GameObject pickupStickBall;
-    public GameObject pickupDoubleBall;
-    public GameObject pickupIncreaseScaleBall;
-    public GameObject pickupReduceScaleBall;
-    public GameObject pickupReduceScalePlatform;
-    public GameObject pickupIncreaseScalePlatform;
-    public GameObject pickupGiveLive;
-    public GameObject pickupTakeLive;
-    public GameObject pickupBallExpl;
+
+    public List<GameObject> PicUps;
+    // public GameObject pickupSpeed;
+    // public GameObject pickupUpPoints;
+    // public GameObject pickupDownPoints;
+    // public GameObject pickupStickBall;
+    // public GameObject pickupDoubleBall;
+    // public GameObject pickupIncreaseScaleBall;
+    // public GameObject pickupReduceScaleBall;
+    // public GameObject pickupReduceScalePlatform;
+    // public GameObject pickupIncreaseScalePlatform;
+    // public GameObject pickupGiveLive;
+    // public GameObject pickupTakeLive;
+    // public GameObject pickupBallExpl;
 
 
     //public GameObject pickupScalePlatform;
@@ -87,18 +87,18 @@ public class Block : MonoBehaviour
         AudioSource audio = FindObjectOfType<AudioSource>();
         audio.PlayOneShot(destroySound);
         
-        CreatePickUp(pickupSpeed);
-        CreatePickUp(pickupUpPoints);
-        CreatePickUp(pickupDownPoints);
-        CreatePickUp(pickupStickBall);
-        CreatePickUp(pickupDoubleBall);
-        CreatePickUp(pickupIncreaseScaleBall);
-        CreatePickUp(pickupReduceScaleBall);
-        CreatePickUp(pickupReduceScalePlatform);
-        CreatePickUp(pickupIncreaseScalePlatform);
-        CreatePickUp(pickupGiveLive);
-        CreatePickUp(pickupTakeLive);
-        CreatePickUp(pickupBallExpl);
+        // CreatePickUp(pickupSpeed);
+        // CreatePickUp(pickupUpPoints);
+        // CreatePickUp(pickupDownPoints);
+        // CreatePickUp(pickupStickBall);
+        // CreatePickUp(pickupDoubleBall);
+        // CreatePickUp(pickupIncreaseScaleBall);
+        // CreatePickUp(pickupReduceScaleBall);
+        // CreatePickUp(pickupReduceScalePlatform);
+        // CreatePickUp(pickupIncreaseScalePlatform);
+        // CreatePickUp(pickupGiveLive);
+        // CreatePickUp(pickupTakeLive);
+        // CreatePickUp(pickupBallExpl);
         if (isExploding)
         {
             //explode

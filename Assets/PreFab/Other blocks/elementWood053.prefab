@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 6024996015404760784}
   - component: {fileID: -1896013889798552939}
   - component: {fileID: 191563198495373647}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: elementWood053
-  m_TagString: Untagged
+  m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,38 +122,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8548a706671f67d4c871f5744ee770e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InvisibleSprite: 0
   isExploding: 0
   explodeRadius: 0
+  hitPoint: 0
+  scorePoints: 8
   images:
   - {fileID: 21300000, guid: cb7f9d4533c36ea43ab2d40657825575, type: 3}
   - {fileID: 21300000, guid: de992d4df246bb2468a9481c267e3c9d, type: 3}
-  hitPoint: 0
-  scorePoints: 8
-  InvisibleSprite: 0
-  pickupSpeed: {fileID: 8940284754966455408, guid: fc386e9368ada41cd8fd937ae99e8ad1,
-    type: 3}
-  pickupUpPoints: {fileID: 872451533855440258, guid: 4eda4b930403694b786b1594b908fc4e,
-    type: 3}
-  pickupDownPoints: {fileID: 7652866533153174522, guid: 2c9764816446272f794925daf3afcc1d,
-    type: 3}
-  pickupStickBall: {fileID: 8940284754966455408, guid: bd347220376b732b0a59681fc3ae05ef,
-    type: 3}
-  pickupDoubleBall: {fileID: 8940284754966455408, guid: 028598a8503d1f4d7bf68f36f29c308a,
-    type: 3}
-  pickupIncreaseScaleBall: {fileID: 8940284754966455408, guid: 26ef96c43099a8da0aaa60e8efb70b13,
-    type: 3}
-  pickupReduceScaleBall: {fileID: 8940284754966455408, guid: 996801ca7c5a0f1278765216c80640a5,
-    type: 3}
-  pickupReduceScalePlatform: {fileID: 8940284754966455408, guid: d6b77b5e9134043c7b3a5e347ba3da49,
-    type: 3}
-  pickupIncreaseScalePlatform: {fileID: 8940284754966455408, guid: 1edf6b8ecd63b492487949b710d963d2,
-    type: 3}
-  pickupGiveLive: {fileID: 8940284754966455408, guid: 2daccf55f5009d42bbfc0c3e6485e21e,
-    type: 3}
-  pickupTakeLive: {fileID: 8940284754966455408, guid: fd334466c98c4da8d9f510e90d1280eb,
-    type: 3}
-  pickupBallExpl: {fileID: 8940284754966455408, guid: a82d96a5b9adf0374917f35f15d791c1,
-    type: 3}
+  destroySound: {fileID: 8300000, guid: cb7ebe8f23f4764a5b073b3f2d5906c4, type: 3}
+  destroyFX: {fileID: 1727626132299242, guid: b0bc1b6b391734647b9bb142bafc0819, type: 3}
+  PicUps:
+  - {fileID: 872451533855440258, guid: 4eda4b930403694b786b1594b908fc4e, type: 3}
+  - {fileID: 7652866533153174522, guid: 2c9764816446272f794925daf3afcc1d, type: 3}
+  - {fileID: 8940284754966455408, guid: 26ef96c43099a8da0aaa60e8efb70b13, type: 3}
+  - {fileID: 8940284754966455408, guid: 996801ca7c5a0f1278765216c80640a5, type: 3}
+  - {fileID: 8940284754966455408, guid: 1edf6b8ecd63b492487949b710d963d2, type: 3}
+  - {fileID: 8940284754966455408, guid: d6b77b5e9134043c7b3a5e347ba3da49, type: 3}
+  - {fileID: 8940284754966455408, guid: 2daccf55f5009d42bbfc0c3e6485e21e, type: 3}
+  - {fileID: 8940284754966455408, guid: fd334466c98c4da8d9f510e90d1280eb, type: 3}
+  - {fileID: 8940284754966455408, guid: bd347220376b732b0a59681fc3ae05ef, type: 3}
+  - {fileID: 8940284754966455408, guid: fc386e9368ada41cd8fd937ae99e8ad1, type: 3}
+  - {fileID: 8940284754966455408, guid: 028598a8503d1f4d7bf68f36f29c308a, type: 3}
+  - {fileID: 8940284754966455408, guid: a82d96a5b9adf0374917f35f15d791c1, type: 3}
   probability: 10
 --- !u!60 &191563198495373647
 PolygonCollider2D:
