@@ -8,7 +8,7 @@ public class MusicPlayer : MonoBehaviour
     {
         // Find all musicPlayers on the scene
         MusicPlayer[] musicPlayers = FindObjectsOfType<MusicPlayer>();
-        // Debug.Log(musicPlayers.Length);
+        
         if (musicPlayers.Length > 1)
         {
             // if more then one => destroy gameObject

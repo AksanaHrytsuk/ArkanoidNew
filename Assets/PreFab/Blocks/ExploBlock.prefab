@@ -121,36 +121,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8548a706671f67d4c871f5744ee770e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InvisibleSprite: 0
+  invisibleSprite: 0
   isExploding: 1
   explodeRadius: 2
   hitPoint: 0
   scorePoints: 1
+  probability: 0
   images: []
   destroySound: {fileID: 8300000, guid: c8f3b83e368f25b4eb8572cfbcffc2ef, type: 3}
-  destroyFX: {fileID: 1892078723244562, guid: 46876a2780737ec45a19d62f88e5ce56, type: 3}
-  pickupSpeed: {fileID: 8940284754966455408, guid: fc386e9368ada41cd8fd937ae99e8ad1,
-    type: 3}
-  pickupUpPoints: {fileID: 872451533855440258, guid: 4eda4b930403694b786b1594b908fc4e,
-    type: 3}
-  pickupDownPoints: {fileID: 7652866533153174522, guid: 2c9764816446272f794925daf3afcc1d,
-    type: 3}
-  pickupStickBall: {fileID: 8940284754966455408, guid: bd347220376b732b0a59681fc3ae05ef,
-    type: 3}
-  pickupDoubleBall: {fileID: 8940284754966455408, guid: 028598a8503d1f4d7bf68f36f29c308a,
-    type: 3}
-  pickupIncreaseScaleBall: {fileID: 8940284754966455408, guid: 26ef96c43099a8da0aaa60e8efb70b13,
-    type: 3}
-  pickupReduceScaleBall: {fileID: 8940284754966455408, guid: 996801ca7c5a0f1278765216c80640a5,
-    type: 3}
-  pickupReduceScalePlatform: {fileID: 8940284754966455408, guid: d6b77b5e9134043c7b3a5e347ba3da49,
-    type: 3}
-  pickupIncreaseScalePlatform: {fileID: 8940284754966455408, guid: 1edf6b8ecd63b492487949b710d963d2,
-    type: 3}
-  pickupGiveLive: {fileID: 8940284754966455408, guid: 2daccf55f5009d42bbfc0c3e6485e21e,
-    type: 3}
-  pickupTakeLive: {fileID: 8940284754966455408, guid: fd334466c98c4da8d9f510e90d1280eb,
-    type: 3}
-  pickupBallExpl: {fileID: 8940284754966455408, guid: a82d96a5b9adf0374917f35f15d791c1,
-    type: 3}
-  probability: 10
+  destroyFx: {fileID: 1892078723244562, guid: 46876a2780737ec45a19d62f88e5ce56, type: 3}
+  pickUps:
+  - {fileID: 872451533855440258, guid: 4eda4b930403694b786b1594b908fc4e, type: 3}
+  - {fileID: 7652866533153174522, guid: 2c9764816446272f794925daf3afcc1d, type: 3}
+  - {fileID: 8940284754966455408, guid: 26ef96c43099a8da0aaa60e8efb70b13, type: 3}
+  - {fileID: 8940284754966455408, guid: 996801ca7c5a0f1278765216c80640a5, type: 3}
+  - {fileID: 8940284754966455408, guid: 1edf6b8ecd63b492487949b710d963d2, type: 3}
+  - {fileID: 8940284754966455408, guid: d6b77b5e9134043c7b3a5e347ba3da49, type: 3}
+  - {fileID: 8940284754966455408, guid: 2daccf55f5009d42bbfc0c3e6485e21e, type: 3}
+  - {fileID: 8940284754966455408, guid: fd334466c98c4da8d9f510e90d1280eb, type: 3}
+  - {fileID: 8940284754966455408, guid: bd347220376b732b0a59681fc3ae05ef, type: 3}
+  - {fileID: 8940284754966455408, guid: fc386e9368ada41cd8fd937ae99e8ad1, type: 3}
+  - {fileID: 8940284754966455408, guid: 028598a8503d1f4d7bf68f36f29c308a, type: 3}
+  - {fileID: 8940284754966455408, guid: a82d96a5b9adf0374917f35f15d791c1, type: 3}

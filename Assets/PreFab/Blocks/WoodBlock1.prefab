@@ -121,15 +121,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8548a706671f67d4c871f5744ee770e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InvisibleSprite: 0
+  invisibleSprite: 0
   isExploding: 0
   explodeRadius: 0
   hitPoint: 0
   scorePoints: 1
+  probability: 100
   images: []
   destroySound: {fileID: 8300000, guid: cb7ebe8f23f4764a5b073b3f2d5906c4, type: 3}
-  destroyFX: {fileID: 100018, guid: a40b64bf23366dc42a892af2c6ff6140, type: 3}
-  PicUps:
+  destroyFx: {fileID: 100000, guid: f2dba9e16cd347f44a395b8204544ee5, type: 3}
+  pickUps:
   - {fileID: 872451533855440258, guid: 4eda4b930403694b786b1594b908fc4e, type: 3}
   - {fileID: 7652866533153174522, guid: 2c9764816446272f794925daf3afcc1d, type: 3}
   - {fileID: 8940284754966455408, guid: 26ef96c43099a8da0aaa60e8efb70b13, type: 3}
@@ -142,4 +143,3 @@ MonoBehaviour:
   - {fileID: 8940284754966455408, guid: fc386e9368ada41cd8fd937ae99e8ad1, type: 3}
   - {fileID: 8940284754966455408, guid: 028598a8503d1f4d7bf68f36f29c308a, type: 3}
   - {fileID: 8940284754966455408, guid: a82d96a5b9adf0374917f35f15d791c1, type: 3}
-  probability: 100

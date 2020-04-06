@@ -52,6 +52,7 @@ MonoBehaviour:
   maxScale: 2
   minScale: 0.5
   isExploding: 0
+  explodeRadius: 2
 --- !u!212 &3248130314441237133
 SpriteRenderer:
   m_ObjectHideFlags: 0

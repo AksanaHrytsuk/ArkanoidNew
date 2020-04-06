@@ -1,45 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Collider2D))]
 public class Block : MonoBehaviour
 {
-    [Header("Config parametrs")]
-    public bool InvisibleSprite;
+    [Header("Config parameters")]
+    
+    public bool invisibleSprite;
     public bool isExploding;
     public float explodeRadius;
     public int hitPoint;
     public int scorePoints;
+    public int probability;
    
     [Header("UI Elements")]
+    
     Points pointsControl;
     LevelManager LevelManager;
     SpriteRenderer spriteRenderer;
     public Sprite[] images;
     //private AudioSource audio;
     public AudioClip destroySound;
-    public GameObject destroyFX;
+    public GameObject destroyFx;
 
-    public List<GameObject> PicUps;
-    // public GameObject pickupSpeed;
-    // public GameObject pickupUpPoints;
-    // public GameObject pickupDownPoints;
-    // public GameObject pickupStickBall;
-    // public GameObject pickupDoubleBall;
-    // public GameObject pickupIncreaseScaleBall;
-    // public GameObject pickupReduceScaleBall;
-    // public GameObject pickupReduceScalePlatform;
-    // public GameObject pickupIncreaseScalePlatform;
-    // public GameObject pickupGiveLive;
-    // public GameObject pickupTakeLive;
-    // public GameObject pickupBallExpl;
-
-
-    //public GameObject pickupScalePlatform;
-    public int probability;
-
+    public List<GameObject> pickUps;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -48,7 +36,7 @@ public class Block : MonoBehaviour
         LevelManager.AddBlockCount();
         pointsControl = FindObjectOfType<Points>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        if (InvisibleSprite == true)
+        if (invisibleSprite == true)
         {
             spriteRenderer.enabled = false;
         }
@@ -73,7 +61,7 @@ public class Block : MonoBehaviour
             else
             {
                 DestroyBlock();
-                pointsControl.countPoints(scorePoints);
+                pointsControl.CountPoints(scorePoints);
             }
         }
     }
@@ -87,18 +75,9 @@ public class Block : MonoBehaviour
         AudioSource audio = FindObjectOfType<AudioSource>();
         audio.PlayOneShot(destroySound);
         
-        // CreatePickUp(pickupSpeed);
-        // CreatePickUp(pickupUpPoints);
-        // CreatePickUp(pickupDownPoints);
-        // CreatePickUp(pickupStickBall);
-        // CreatePickUp(pickupDoubleBall);
-        // CreatePickUp(pickupIncreaseScaleBall);
-        // CreatePickUp(pickupReduceScaleBall);
-        // CreatePickUp(pickupReduceScalePlatform);
-        // CreatePickUp(pickupIncreaseScalePlatform);
-        // CreatePickUp(pickupGiveLive);
-        // CreatePickUp(pickupTakeLive);
-        // CreatePickUp(pickupBallExpl);
+        //CreatePickUp(pickUps[Random.Range(0, pickUps.Count +1)]); 
+        CreatePickUp(pickUps[5]);
+        
         if (isExploding)
         {
             //explode
@@ -138,6 +117,7 @@ public class Block : MonoBehaviour
 
                 // pickupPosition.x += Random.Range(-1, 1);
                 //Instantiate(pickup, ModifySpeed, Quaternion.identity);
+                
                 if (Chance())
                 {
                     GameObject newObject = Instantiate(pick);
@@ -148,11 +128,12 @@ public class Block : MonoBehaviour
                 }
             }
 
-            if (destroyFX != null)
+            if (destroyFx != null)
             {
                 Vector3 fxPosition = transform.position;
-                GameObject newObject = Instantiate(destroyFX, fxPosition, Quaternion.identity);
-                Destroy(newObject, 3f);
+                GameObject newObject = Instantiate(original: destroyFx, fxPosition, Quaternion.identity);
+                Debug.Log("Exploded");
+                Destroy(newObject, 2f);
             }
         }
 

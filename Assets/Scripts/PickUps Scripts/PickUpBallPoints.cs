@@ -13,7 +13,7 @@ public class PickUpBallPoints : MonoBehaviour
         if (collision.gameObject.CompareTag("Platform"))
         {
             points = FindObjectOfType<Points>();
-            points.countPoints(pointsAmount);
+            points.CountPoints(pointsAmount);
             ApplyPickUp();
             Destroy(gameObject);
         }

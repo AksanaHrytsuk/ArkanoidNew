@@ -4,17 +4,17 @@ using UnityEngine.UI;
 public class Points : MonoBehaviour
 {
     [Header("UI Elements")]
+    
     public Text points;
     public Text text;
-    
-    [Header("Config parametrs")]
-    public int addPoints;
-    public int maxHearts;
-    int hearts;
-    
     WallDownScript wallDownScripts;
     Ball ball;
     
+    [Header("Config parameters")]
+    
+    public int addPoints;
+    public int maxHearts;
+
     LoaderScens loaderScens;
     private void Awake()
     {
@@ -42,7 +42,7 @@ public class Points : MonoBehaviour
         }
     }
 
-    public void countPoints(int score)
+    public void CountPoints(int score)
     {
         text.text = "Lives: " + maxHearts;
         addPoints += score;

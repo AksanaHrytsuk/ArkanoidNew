@@ -1,30 +1,21 @@
-﻿using UnityEngine;
+﻿using PickUps;
+using UnityEngine;
 
 public class Platform : MonoBehaviour
 {
+    [Header("UI Elements")]
+    
     Pause pointsCo;
     Ball ball;
+    
+    [Header("Config Parameters")]
+    
     public float minX = -7f;
     public float maxX = 7f;
 
     public float maxScalePlatform;
-
     public float minScalePlatform;
-    // Update is called once per frame
-
-
-    public void ModifiScalePlatform(float scalePlatform)
-    {
-        if (transform.localScale.x < maxScalePlatform && transform.localScale.y < maxScalePlatform )
-        {
-            if (transform.localScale.x < maxScalePlatform && transform.localScale.y > minScalePlatform)
-            {
-                Vector3 scl = new Vector3(scalePlatform,0,0);
-                transform.localScale += scl;
-            }
-        }
-    }
-
+   
     private void Start()
     {
         pointsCo = FindObjectOfType<Pause>();

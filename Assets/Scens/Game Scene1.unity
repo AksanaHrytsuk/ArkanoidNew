@@ -793,11 +793,6 @@ PrefabInstance:
       propertyPath: pickup
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 1003984631744903654, guid: 832ec568f68246341a69fa7a0c2ca3db,
-        type: 3}
-      propertyPath: probability
-      value: 80
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 832ec568f68246341a69fa7a0c2ca3db, type: 3}
 --- !u!4 &565470789 stripped
@@ -1509,6 +1504,11 @@ PrefabInstance:
       propertyPath: InvisibleSprite
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -1896013889798552939, guid: 2e3e251fc22a255c48d31fdd54693420,
+        type: 3}
+      propertyPath: invisibleSprite
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5863046312109944270, guid: 2e3e251fc22a255c48d31fdd54693420,
         type: 3}
       propertyPath: m_Enabled
@@ -1678,11 +1678,6 @@ PrefabInstance:
     - target: {fileID: 1003984631744903650, guid: 6f2c306fe4d5ee1e1a63f84dbca523e3,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1003984631744903654, guid: 6f2c306fe4d5ee1e1a63f84dbca523e3,
-        type: 3}
-      propertyPath: isExploding
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2579,6 +2574,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3248130314441237168, guid: a2fd422898300f548ab738f3576c0ed8,
+        type: 3}
+      propertyPath: explodeRadius
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 3248130314971758926, guid: a2fd422898300f548ab738f3576c0ed8,
         type: 3}

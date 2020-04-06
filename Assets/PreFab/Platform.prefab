@@ -129,5 +129,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minX: -7.3
   maxX: 7.4
-  maxScalePlatform: 4
+  maxScalePlatform: 3
   minScalePlatform: 0.5

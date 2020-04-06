@@ -223,7 +223,7 @@ PrefabInstance:
     - target: {fileID: 1003984631744903650, guid: 832ec568f68246341a69fa7a0c2ca3db,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 832ec568f68246341a69fa7a0c2ca3db, type: 3}
@@ -354,12 +354,12 @@ PrefabInstance:
     - target: {fileID: 1003984631744903648, guid: 6f2c306fe4d5ee1e1a63f84dbca523e3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003984631744903648, guid: 6f2c306fe4d5ee1e1a63f84dbca523e3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.12
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003984631744903648, guid: 6f2c306fe4d5ee1e1a63f84dbca523e3,
         type: 3}
@@ -411,6 +411,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: ExploBlock
       objectReference: {fileID: 0}
+    - target: {fileID: 1003984631744903650, guid: 6f2c306fe4d5ee1e1a63f84dbca523e3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1003984631744903654, guid: 6f2c306fe4d5ee1e1a63f84dbca523e3,
+        type: 3}
+      propertyPath: destroyFx
+      value: 
+      objectReference: {fileID: 1892078723244562, guid: 46876a2780737ec45a19d62f88e5ce56,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2c306fe4d5ee1e1a63f84dbca523e3, type: 3}
 --- !u!1001 &301037604
@@ -608,7 +619,7 @@ GameObject:
   - component: {fileID: 347151246}
   m_Layer: 0
   m_Name: Wall2Left
-  m_TagString: Wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -738,11 +749,39 @@ PrefabInstance:
     - target: {fileID: 4445741093370593887, guid: 8d2942663c6ae2119aa73bdfefe1e4cf,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2052267370, guid: 8d2942663c6ae2119aa73bdfefe1e4cf, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8d2942663c6ae2119aa73bdfefe1e4cf, type: 3}
+--- !u!1 &422927378 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4445741093370593887, guid: 8d2942663c6ae2119aa73bdfefe1e4cf,
+    type: 3}
+  m_PrefabInstance: {fileID: 5275315915744878550}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &422927379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422927378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8548a706671f67d4c871f5744ee770e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  invisibleSprite: 0
+  isExploding: 0
+  explodeRadius: 0
+  hitPoint: 0
+  scorePoints: 20
+  probability: 10
+  images: []
+  destroySound: {fileID: 0}
+  destroyFx: {fileID: 0}
+  PicUps: []
 --- !u!1001 &516884285
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -813,7 +852,7 @@ PrefabInstance:
     - target: {fileID: 1003984631744903650, guid: 832ec568f68246341a69fa7a0c2ca3db,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 832ec568f68246341a69fa7a0c2ca3db, type: 3}
@@ -829,7 +868,7 @@ GameObject:
   - component: {fileID: 526325315}
   m_Layer: 0
   m_Name: Wall3Right
-  m_TagString: Wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -884,7 +923,7 @@ GameObject:
   m_Component:
   - component: {fileID: 528029805}
   - component: {fileID: 528029806}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Trail
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -1033,7 +1072,7 @@ GameObject:
   - component: {fileID: 531739874}
   m_Layer: 0
   m_Name: Wall1Down
-  m_TagString: Wall
+  m_TagString: LoseGame
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1102,7 +1141,7 @@ GameObject:
   - component: {fileID: 638500740}
   m_Layer: 0
   m_Name: Wall4Up
-  m_TagString: Wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1284,11 +1323,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1896013889798552939, guid: 2e3e251fc22a255c48d31fdd54693420,
         type: 3}
-      propertyPath: hitPoint
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -1896013889798552939, guid: 2e3e251fc22a255c48d31fdd54693420,
-        type: 3}
       propertyPath: images.Array.data[0]
       value: 
       objectReference: {fileID: 21300000, guid: 70037955aeb830b4ca92bedccddbd555,
@@ -1307,7 +1341,7 @@ PrefabInstance:
     - target: {fileID: 6106299979458416141, guid: 2e3e251fc22a255c48d31fdd54693420,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6228318900197543311, guid: 2e3e251fc22a255c48d31fdd54693420,
         type: 3}
@@ -1424,18 +1458,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8548a706671f67d4c871f5744ee770e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InvisibleSprite: 0
+  invisibleSprite: 0
   isExploding: 0
   explodeRadius: 0
   hitPoint: 0
-  scorePoints: 0
+  scorePoints: 20
+  probability: 10
   images:
   - {fileID: 21300000, guid: f4d8f3314d0269c4ab70f7b780f34f08, type: 3}
   - {fileID: 21300000, guid: 1a776119a2d47454fba17a668a504214, type: 3}
   destroySound: {fileID: 0}
-  destroyFX: {fileID: 0}
+  destroyFx: {fileID: 0}
   PicUps: []
-  probability: 0
 --- !u!4 &906117835 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1003984631744903648, guid: 832ec568f68246341a69fa7a0c2ca3db,
@@ -1753,7 +1787,7 @@ PrefabInstance:
     - target: {fileID: 1003984631744903650, guid: 832ec568f68246341a69fa7a0c2ca3db,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1003984631744903654, guid: 832ec568f68246341a69fa7a0c2ca3db,
         type: 3}
@@ -2042,7 +2076,7 @@ GameObject:
   - component: {fileID: 1663931553}
   - component: {fileID: 1663931552}
   - component: {fileID: 1663931554}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Ball
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -2162,7 +2196,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 81830af2b3e549074b08d05543d0a3dd, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2372,7 +2406,7 @@ PrefabInstance:
     - target: {fileID: 6087510053487869171, guid: 7517eac7c0abdfa31814787fc4c5547c,
         type: 3}
       propertyPath: InvisibleSprite
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7517eac7c0abdfa31814787fc4c5547c, type: 3}
@@ -2465,7 +2499,7 @@ PrefabInstance:
     - target: {fileID: 7449640327084593883, guid: 7989bce759fc2e54b90e170a1880be85,
         type: 3}
       propertyPath: autoplay
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7989bce759fc2e54b90e170a1880be85, type: 3}
@@ -2761,7 +2795,7 @@ PrefabInstance:
     - target: {fileID: 4445741093370593887, guid: 8d2942663c6ae2119aa73bdfefe1e4cf,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2052267370, guid: 8d2942663c6ae2119aa73bdfefe1e4cf, type: 3}
@@ -2781,7 +2815,7 @@ PrefabInstance:
     - target: {fileID: 6106299979458416141, guid: 2e3e251fc22a255c48d31fdd54693420,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6228318900197543311, guid: 2e3e251fc22a255c48d31fdd54693420,
         type: 3}
