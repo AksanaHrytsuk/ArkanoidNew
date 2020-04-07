@@ -4,18 +4,16 @@ using UnityEngine.UI;
 public class Points : MonoBehaviour
 {
     [Header("UI Elements")]
-    
     public Text points;
     public Text text;
     WallDownScript wallDownScripts;
     Ball ball;
+    LoaderScens loaderScens;
     
     [Header("Config parameters")]
-    
     public int addPoints;
     public int maxHearts;
 
-    LoaderScens loaderScens;
     private void Awake()
     {
         Points[] pointsList = FindObjectsOfType<Points>();

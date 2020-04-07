@@ -1,15 +1,11 @@
-﻿using PickUps;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Platform : MonoBehaviour
 {
-    [Header("UI Elements")]
-    
     Pause pointsCo;
     Ball ball;
     
     [Header("Config Parameters")]
-    
     public float minX = -7f;
     public float maxX = 7f;
 
@@ -40,7 +36,7 @@ public class Platform : MonoBehaviour
         // позиция мыши в координатах игрового мира
 
         float mouseX = mouseWorldPos.x;
-        // Debug.Log("mousePos: " + mousePos + "mousWorldPos" + mouseWorldPos);
+        //Debug.Log("mousePos: " + mousePos + "mouseWorldPos" + mouseWorldPos);
         float clampedMouseX = Mathf.Clamp(mouseX, minX, maxX);
         float platformY = transform.position.y;
         transform.position = new Vector3(clampedMouseX, platformY, 0);

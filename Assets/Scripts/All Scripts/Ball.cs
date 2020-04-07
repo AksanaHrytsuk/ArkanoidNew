@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    [Header("UI Elements")]    
     Platform platform;
     Rigidbody2D rb;
     private AudioSource _audio;
@@ -176,7 +175,6 @@ public class Ball : MonoBehaviour
 
                 ballOffset = transform.position - platform.transform.position; //вектор между платвормой и мячом
             }
-            
         }
         
         if (collision.gameObject.CompareTag($"Block"))
@@ -193,7 +191,7 @@ public class Ball : MonoBehaviour
     }
 
     private void OnCollisionExit(Collision collision)
-{
+    {
         Debug.Log("CollisionExit");
     }
     private void OnCollisionStay2D(Collision2D collision)

@@ -8,7 +8,6 @@ using UnityEngine.UI;
 public class Block : MonoBehaviour
 {
     [Header("Config parameters")]
-    
     public bool invisibleSprite;
     public bool isExploding;
     public float explodeRadius;
@@ -17,21 +16,20 @@ public class Block : MonoBehaviour
     public int probability;
    
     [Header("UI Elements")]
-    
-    Points pointsControl;
-    LevelManager LevelManager;
-    SpriteRenderer spriteRenderer;
     public Sprite[] images;
     //private AudioSource audio;
     public AudioClip destroySound;
     public GameObject destroyFx;
+    
+    Points pointsControl;
+    LevelManager LevelManager;
+    SpriteRenderer spriteRenderer;
 
     public List<GameObject> pickUps;
     
     // Start is called before the first frame update
     void Start()
     {
-        //audio = GetComponent<AudioSource>();
         LevelManager = FindObjectOfType<LevelManager>();
         LevelManager.AddBlockCount();
         pointsControl = FindObjectOfType<Points>();
@@ -75,8 +73,8 @@ public class Block : MonoBehaviour
         AudioSource audio = FindObjectOfType<AudioSource>();
         audio.PlayOneShot(destroySound);
         
-        //CreatePickUp(pickUps[Random.Range(0, pickUps.Count +1)]); 
-        CreatePickUp(pickUps[5]);
+        CreatePickUp(pickUps[Random.Range(0, pickUps.Count +1)]); 
+        // CreatePickUp(pickUps[5]); проверка пикапа 
         
         if (isExploding)
         {
